@@ -1,182 +1,116 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doğan Peyzaj | Bahçe Bakımı - Rulo Çim - Sulama - Peyzaj</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Doğan Peyzaj – Bahçe & Rulo Çim & Sulama</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Doğan Peyzaj | Marmara Bölgesi genelinde profesyonel bahçe bakımı, rulo çim serimi, otomatik sulama sistemleri ve villa bahçesi düzenleme hizmeti.">
-    <meta name="keywords" content="peyzaj, bahçe bakımı, rulo çim, sulama sistemi, peyzaj istanbul, çim biçme, villa bahçesi düzenleme">
-    <meta name="author" content="Doğan Peyzaj">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920") no-repeat center center fixed;
+        background-size: cover;
+        backdrop-filter: brightness(0.6);
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url("https://i.ibb.co/gDk1w9d/garden-villa-green.jpg") no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-        }
+    header {
+        text-align: center;
+        padding: 55px 20px;
+        background: rgba(0,0,0,0.40);
+    }
 
-        /* Arka planı daha koyu yeşil yapan efekt */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 40, 0, 0.55);
-            backdrop-filter: blur(1.5px);
-            z-index: -1;
-        }
+    h1 {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: rgba(0, 0, 0, 0.55);
-        }
+    h2 {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 30px;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 36px;
-            font-weight: bold;
-        }
+    section {
+        padding: 20px;
+        background: rgba(0,0,0,0.55);
+        margin: 20px;
+        border-radius: 10px;
+    }
 
-        p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
+    ul { 
+        list-style: none; 
+        padding: 0; 
+        font-size: 18px;
+        line-height: 28px;
+    }
 
-        .section-box {
-            background: rgba(0, 0, 0, 0.55);
-            margin: 20px auto;
-            padding: 25px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 900px;
-        }
+    li::before {
+        content: "🌿 ";
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 15px;
-            font-size: 26px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-        }
-
-        .service-item {
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.12);
-            border-radius: 8px;
-            text-align: center;
-            font-size: 18px;
-        }
-
-        .districts {
-            column-count: 2;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* Sabit WhatsApp Butonu */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 22px;
-            right: 22px;
-            background: #25D366;
-            padding: 15px 18px;
-            border-radius: 50px;
-            color: white;
-            font-size: 19px;
-            font-weight: bold;
-            text-decoration: none;
-            z-index: 999;
-            box-shadow: 0px 0px 12px black;
-        }
-
-        .floating-whatsapp:hover {
-            background: #1ebe5d;
-        }
-
-        .whatsapp-btn {
-            display: block;
-            width: 90%;
-            max-width: 220px;
-            margin: 20px auto 0;
-            padding: 12px;
-            text-align: center;
-            background: #25D366;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            background: rgba(0, 0, 0, 0.55);
-        }
-    </style>
+    /* Sabit WhatsApp Butonu */
+    .whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        padding: 15px 22px;
+        font-size: 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        box-shadow: 0 0 10px black;
+        font-weight: bold;
+    }
+</style>
 </head>
 
 <body>
 
 <header>
     <h1>Doğan Peyzaj</h1>
-    <p>Bahçe Bakımı • Rulo Çim • Sulama Sistemleri • Peyzaj Düzenleme</p>
+    <p>Profesyonel Bahçe Düzenleme – Rulo Çim – Otomatik Sulama Sistemleri</p>
 </header>
 
-<div class="section-box">
+<section id="about">
     <h2>Hakkımızda</h2>
     <p>
-        Doğan Peyzaj olarak Marmara Bölgesi genelinde villa bahçeleri, siteler, işletmeler ve özel mülklere 
-        profesyonel peyzaj ve bahçe bakım hizmeti sunuyoruz.
-        Uzman ekibimizle hızlı, düzenli, güvenilir ve kaliteli çözümler üretiyoruz.
+        Doğan Peyzaj olarak Marmara Bölgesi genelinde profesyonel bahçe düzenleme, rulo çim serimi,
+        sulama tesisatı kurulumu ve peyzaj bakım hizmetleri sunuyoruz.  
+        Modern ekipmanlarımız ve uzman ekibimizle villa, site, iş yeri ve özel mülklerde kaliteli hizmet veriyoruz.
     </p>
-</div>
+</section>
 
-<div class="section-box">
+<section id="services">
     <h2>Hizmetlerimiz</h2>
+    <ul>
+        <li>Rulo Çim Serimi</li>
+        <li>Bahçe Düzenleme</li>
+        <li>Otomatik Sulama Sistemi</li>
+        <li>Ağaç – Bitki Dikimi & Bakımı</li>
+        <li>Çim Biçme & Peyzaj Bakım</li>
+        <li>Toprak Düzeltme & Hafriyat</li>
+    </ul>
+</section>
 
-    <div class="services-grid">
-        <div class="service-item">🌿 Bahçe Bakımı</div>
-        <div class="service-item">🌱 Rulo Çim Serimi</div>
-        <div class="service-item">💧 Otomatik Sulama Sistemi</div>
-        <div class="service-item">🌳 Ağaç Budama</div>
-        <div class="service-item">✂️ Çim Biçme</div>
-        <div class="service-item">🏡 Villa Bahçesi Düzenleme</div>
-    </div>
-</div>
-
-<div class="section-box">
-    <h2>Marmara Bölgesi Hizmet Alanlarımız</h2>
-
-    <div class="districts">
-        <b>İller:</b><br>
-        İstanbul, Bursa, Kocaeli, Sakarya, Yalova, Tekirdağ, Edirne, Kırklareli.<br><br>
-
-        <b>İstanbul İlçeleri:</b><br>
-        Pendik, Tuzla, Şişli, Beşiktaş, Kağıthane, Sarıyer, Bakırköy, Bahçelievler, Bağcılar,
-        Üsküdar, Ataşehir, Ümraniye, Çekmeköy, Beykoz, Sancaktepe, Maltepe, Kartal,
-        Küçükçekmece, Avcılar, Beylikdüzü, Büyükçekmece, Esenyurt, Arnavutköy,
-        Gaziosmanpaşa, Esenler, Sultanbeyli, Fatih, Beyoğlu, Başakşehir, <b>Silivri</b>.
-    </div>
-
-    <a class="whatsapp-btn" href="https://wa.me/905522153036" target="_blank">WhatsApp İletişim</a>
-</div>
+<section id="areas">
+    <h2>Hizmet Verilen İlçeler (Marmara)</h2>
+    <ul>
+        <li>İstanbul – Tüm İlçeler (Silivri dahil!)</li>
+        <li>Kocaeli – İzmit, Gebze, Kartepe</li>
+        <li>Sakarya – Adapazarı, Sapanca</li>
+        <li>Tekirdağ – Çorlu, Çerkezköy</li>
+        <li>Bursa – Osmangazi, Nilüfer</li>
+        <li>Yalova – Merkez, Altınova</li>
+    </ul>
+</section>
 
 <!-- Sabit WhatsApp Butonu -->
-<a class="floating-whatsapp" href="https://wa.me/905522153036" target="_blank">WhatsApp</a>
-
-<footer>
-    © 2025 Doğan Peyzaj – Tüm Hakları Saklıdır
-</footer>
+<a class="whatsapp-btn" href="https://wa.me/905522153036" target="_blank">
+    WhatsApp İletişim
+</a>
 
 </body>
 </html>
