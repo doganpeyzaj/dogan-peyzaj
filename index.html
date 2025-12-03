@@ -1,443 +1,59 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Doğan Peyzaj — İstanbul | Rulo Çim · Villa Bahçe · Sulama</title>
-<meta name="description" content="Doğan Peyzaj — İstanbul'da rulo çim, villa bahçe düzenleme, otomatik sulama sistemleri ve bakım hizmetleri. Hemen WhatsApp'tan ulaşın." />
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-
-<style>
-:root{
-  --bg:#0f1720;        /* dark background default */
-  --panel:#0b1220;
-  --card:#071019;
-  --text:#e6eef6;
-  --muted:#9fb2c8;
-  --accent:#2ecc71;    /* yeşil */
-  --accent-2:#27ae60;
-  --glass: rgba(255,255,255,0.04);
-  --shadow: 0 10px 30px rgba(2,6,23,0.6);
-  --radius:12px;
-  --maxw:1100px;
-}
-
-/* Light theme (toggled via .light on body) */
-body.light{
-  --bg:#f6fbf5;
-  --panel:#ffffff;
-  --card:#ffffff;
-  --text:#042024;
-  --muted:#4b6b6b;
-  --accent:#1d7a33;
-  --accent-2:#126028;
-  --glass: rgba(0,0,0,0.02);
-  --shadow: 0 8px 24px rgba(10,20,10,0.06);
-}
-
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-  background:linear-gradient(180deg,var(--bg), #071017 80%);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
-  padding-bottom:120px;
-}
-
-/* container */
-.wrap{
-  width:94%;
-  max-width:var(--maxw);
-  margin:28px auto;
-}
-
-/* header */
-.header{
-  display:flex;
-  gap:16px;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:18px;
-}
-.brand{
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-.logo{
-  width:58px;height:58px;border-radius:10px;
-  background:linear-gradient(135deg,var(--accent),var(--accent-2));
-  display:flex;align-items:center;justify-content:center;
-  font-weight:700;color:white;font-size:18px;box-shadow:var(--shadow);
-}
-.title{
-  font-size:18px;font-weight:700;
-}
-.subtitle{font-size:13px;color:var(--muted)}
-
-/* header actions */
-.header-actions{display:flex;gap:10px;align-items:center;}
-.btn{
-  background:var(--glass);
-  color:var(--text);
-  border:1px solid rgba(255,255,255,0.03);
-  padding:8px 12px;border-radius:10px;
-  cursor:pointer;font-weight:600;font-size:14px;
-  transition:transform .18s ease, box-shadow .18s;
-}
-.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
-
-/* hero */
-.hero{
-  background: linear-gradient(0deg, rgba(0,0,0,0.28), rgba(0,0,0,0.18)),
-    url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat;
-  border-radius:16px;padding:36px;box-shadow:var(--shadow);
-  color:var(--text); margin-bottom:20px;
-}
-.hero-inner{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
-.hero-left{max-width:680px}
-.h1{font-size:26px;margin:0 0 8px;font-weight:800}
-.h-lead{margin:0;color:var(--muted);font-size:14px}
-.hero-cta{margin-top:14px;display:flex;gap:12px;flex-wrap:wrap}
-.cta-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:white;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
-.cta-secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--text);text-decoration:none}
-
-/* layout grid */
-.grid{
-  display:grid;
-  grid-template-columns: 1fr 360px;
-  gap:18px;
-  align-items:start;
-}
-
-/* main content */
-.card{
-  background:var(--panel);
-  border-radius:12px;padding:18px;box-shadow:var(--shadow);
-}
-.section-title{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.section-title h2{margin:0;font-size:18px;color:var(--accent)}
-.section-sub{color:var(--muted);font-size:13px;margin-bottom:10px}
-
-/* services */
-.services{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
-.service{
-  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
-  padding:12px;border-radius:10px;border-left:4px solid var(--accent);
-  display:flex;gap:12px;align-items:center;
-  transition:transform .18s ease, box-shadow .18s;
-}
-.service:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,8,10,0.35)}
-.s-icon{
-  width:46px;height:46px;border-radius:10px;background:rgba(255,255,255,0.03);
-  display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent);
-}
-.s-body h3{margin:0;font-size:15px}
-.s-body p{margin:6px 0 0;font-size:13px;color:var(--muted)}
-
-/* sidebar */
-.sidebar .box{margin-bottom:12px}
-.contact-card{display:flex;flex-direction:column;gap:8px}
-.phone{font-size:18px;font-weight:800;color:var(--accent)}
-.small-muted{color:var(--muted);font-size:13px}
-
-/* gallery */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;margin-top:10px;
-}
-.gallery img{
-  width:100%;height:120px;object-fit:cover;border-radius:10px;display:block;
-  box-shadow:0 10px 30px rgba(0,0,0,0.25);transition:transform .25s ease,opacity .25s;
-}
-.gallery img:hover{transform:scale(1.03);opacity:0.95}
-
-/* big gallery responsive */
-@media (max-width:1000px){
-  .grid{grid-template-columns:1fr}
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  .services{grid-template-columns:1fr}
-}
-@media (max-width:480px){
-  .header{flex-direction:column;align-items:flex-start;gap:10px}
-  .hero-inner{flex-direction:column;align-items:flex-start}
-  .hero{padding:20px}
-  .gallery img{height:140px}
-}
-
-/* footer */
-.footer{
-  margin:28px auto 100px; max-width:var(--maxw); padding:18px 20px;border-radius:12px;background:var(--panel);
-  color:var(--muted); text-align:center;
-}
-
-/* theme toggle */
-.theme-toggle{display:inline-flex;gap:8px;align-items:center;padding:6px 8px;border-radius:999px;background:var(--glass);cursor:pointer}
-
-/* subtle animation */
-.fade-in{opacity:0;transform:translateY(8px);animation:fadeIn .7s forwards}
-@keyframes fadeIn{to{opacity:1;transform:none}}
-
-/* image lightbox */
-.lightbox{
-  position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;padding:20px;z-index:9999;opacity:0;pointer-events:none;transition:opacity .25s;
-}
-.lightbox.show{opacity:1;pointer-events:auto}
-.lightbox img{max-width:95%;max-height:92%;border-radius:8px;box-shadow:0 18px 60px rgba(0,0,0,0.6)}
-
-/* small helpers */
-.kv{display:inline-block;padding:6px 10px;border-radius:8px;background:var(--glass);font-weight:700;color:var(--text);font-size:13px}
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doğan Peyzaj – Rulo Çim & Bahçe Düzenleme</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- header -->
-<div class="wrap header fade-in">
-  <div class="brand">
-    <div class="logo">DP</div>
-    <div>
-      <div class="title">Doğan Peyzaj</div>
-      <div class="subtitle">İstanbul · Rulo Çim · Villa Bahçe · Sulama</div>
-    </div>
-  </div>
+<header>
+    <div class="logo">Doğan Peyzaj</div>
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+</header>
 
-  <div class="header-actions">
-    <div class="theme-toggle btn" id="themeToggle" title="Tema değiştir">
-      <span id="themeIcon">🌙</span>
-    </div>
-    <a class="btn" href="https://wa.me/905522153036" target="_blank">WhatsApp ile Hemen İletişim</a>
-  </div>
-</div>
+<section class="hero">
+    <h1>Profesyonel Rulo Çim & Bahçe Düzenleme</h1>
+    <p>İstanbul genelinde hızlı keşif, kaliteli işçilik ve garantili hizmet.</p>
+    <a class="btn" href="https://wa.me/905522153036">WhatsApp ile İletişim</a>
+</section>
 
-<!-- hero -->
-<div class="wrap hero fade-in" style="--delay:0s">
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="h1">Doğan Peyzaj — İstanbul</div>
-      <div class="h-lead">Villa bahçesi & rulo çim serimi, otomatik sulama sistemleri ve profesyonel bakım. Hemen keşif isteyin.</div>
-      <div class="hero-cta">
-        <a class="cta-primary" href="https://wa.me/905522153036" target="_blank">WhatsApp'tan Hemen Yaz</a>
-        <a class="cta-secondary" href="#gallery">Galeriye Bak</a>
-      </div>
+<section id="hizmetler" class="hizmetler">
+    <h2>Hizmetlerimiz</h2>
+
+    <div class="hizmet-kutu">
+        <h3>Rulo Çim Döşeme</h3>
+        <p>1 günde teslim hızlı ve kaliteli rulo çim uygulaması.</p>
     </div>
 
-    <div class="kv" style="text-align:right">
-      <div style="font-size:13px;color:var(--muted)">Hızlı İletişim</div>
-      <div class="phone" style="color:var(--accent)">0552 215 30 36</div>
-      <div class="small-muted">İstanbul geneli hizmet</div>
-    </div>
-  </div>
-</div>
-
-<!-- main grid -->
-<div class="wrap grid">
-
-  <!-- main column -->
-  <main>
-
-    <!-- about -->
-    <section class="card fade-in" style="margin-bottom:16px">
-      <div class="section-title"><h2>Hakkımızda</h2></div>
-      <div class="section-sub">Doğan Peyzaj — İstanbul genelinde villa ve site bahçeleri için anahtar teslim çözümler.</div>
-      <p style="color:var(--muted)">Profesyonel peyzaj, rulo çim, otomatik sulama ve bahçe bakım hizmetlerinde uzman ekibimizle projeleri planlıyoruz. Keşif, uygulama ve bakım aşamalarında müşteri memnuniyeti önceliğimizdir.</p>
-    </section>
-
-    <!-- services -->
-    <section class="card fade-in">
-      <div class="section-title"><h2>Hizmetlerimiz</h2></div>
-      <div class="section-sub">İstanbul içi hizmet alanlarımız ve öne çıkan uygulamalar</div>
-
-      <div class="services">
-        <div class="service">
-          <div class="s-icon">🌱</div>
-          <div class="s-body"><h3>Rulo Çim Serimi</h3><p>Toprak hazırlığı, tesviye ve garantili rulo çim uygulaması.</p></div>
-        </div>
-
-        <div class="service">
-          <div class="s-icon">💧</div>
-          <div class="s-body"><h3>Otomatik Sulama</h3><p>Zamanlayıcı & sensörlü sulama sistemleri; su tasarrufu sağlar.</p></div>
-        </div>
-
-        <div class="service">
-          <div class="s-icon">🏡</div>
-          <div class="s-body"><h3>Villa Bahçe Tasarım</h3><p>Özel tasarım, yürüyüş yolları, aydınlatma ve bitkilendirme.</p></div>
-        </div>
-
-        <div class="service">
-          <div class="s-icon">🌳</div>
-          <div class="s-body"><h3>Ağaç & Bitki Dikimi</h3><p>İstanbul iklimine uygun fidan seçimi ve profesyonel dikim.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- gallery -->
-    <section id="gallery" class="card fade-in" style="margin-top:16px">
-      <div class="section-title"><h2>Villa Bahçe Galerisi</h2></div>
-      <div class="section-sub">20 adet seçkin görsel — örnek uygulamalar</div>
-
-      <div class="gallery" id="galleryGrid">
-        <!-- 20 görsel -->
-        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=60" alt="Villa 1" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=60" alt="Villa 2" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=60" alt="Villa 3" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1560185127-6edb01a6fdf4?auto=format&fit=crop&w=1200&q=60" alt="Villa 4" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1523413363574-c30aa1c2a516?auto=format&fit=crop&w=1200&q=60" alt="Villa 5" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1469796466635-455ede028aca?auto=format&fit=crop&w=1200&q=60" alt="Villa 6" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=60" alt="Villa 7" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=60" alt="Villa 8" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1486917944543-79fc1cec56b7?auto=format&fit=crop&w=1200&q=60" alt="Villa 9" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1474496517593-4be469ec46ee?auto=format&fit=crop&w=1200&q=60" alt="Villa 10" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1501000134611-14bc9f2f77d3?auto=format&fit=crop&w=1200&q=60" alt="Villa 11" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1501000159123-6a5f4d0f8eae?auto=format&fit=crop&w=1200&q=60" alt="Villa 12" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=60" alt="Villa 13" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=60" alt="Villa 14" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=60" alt="Villa 15" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&w=1200&q=60" alt="Villa 16" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1501004323604-1b3b1e1a6c4c?auto=format&fit=crop&w=1200&q=60" alt="Villa 17" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1508154048109-de555266b87f?auto=format&fit=crop&w=1200&q=60" alt="Villa 18" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1200&q=60" alt="Villa 19" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=60" alt="Villa 20" loading="lazy">
-      </div>
-    </section>
-
-    <!-- about small -->
-    <section class="card fade-in" style="margin-top:16px">
-      <div class="section-title"><h2>Neden Biz?</h2></div>
-      <div class="section-sub">İstanbul genelinde güvenilir, hızlı ve garantili hizmet</div>
-      <ul style="color:var(--muted);line-height:1.8">
-        <li>Profesyonel ekip ve 10+ yıllık tecrübe</li>
-        <li>Aynı gün keşif ve hızlı uygulama</li>
-        <li>Projeye özel çözümler ve garanti</li>
-      </ul>
-    </section>
-
-  </main>
-
-  <!-- sidebar -->
-  <aside class="sidebar">
-    <div class="card box fade-in">
-      <div class="section-title"><h2>İletişim</h2></div>
-      <div class="contact-card">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <div style="font-size:14px;color:var(--muted)">Hızlı iletişim</div>
-            <div class="phone" style="color:var(--accent)">0552 215 30 36</div>
-          </div>
-          <div style="text-align:right">
-            <div style="font-size:12px;color:var(--muted)">Çalışma</div>
-            <div style="font-weight:700">7/24</div>
-          </div>
-        </div>
-
-        <div style="margin-top:12px">
-          <a class="btn" href="https://wa.me/905522153036" target="_blank">WhatsApp ile Hemen</a>
-        </div>
-
-        <div style="margin-top:14px;color:var(--muted)">
-          <div style="font-size:13px">Hizmet Bölgesi</div>
-          <div style="font-weight:700">İstanbul - Tüm İlçeler</div>
-        </div>
-      </div>
+    <div class="hizmet-kutu">
+        <h3>Bahçe Düzenleme</h3>
+        <p>Modern, villa tipi ve sade bahçe tasarımları.</p>
     </div>
 
-    <div class="card box fade-in">
-      <div class="section-title"><h2>Hızlı Bilgiler</h2></div>
-      <div class="small-muted">Ücretsiz keşif · Garantili işçilik · Profesyonel ekip</div>
-      <div style="margin-top:10px">
-        <span class="kv">Villa Bahçe</span>
-        <span class="kv" style="margin-left:8px">Rulo Çim</span>
-      </div>
+    <div class="hizmet-kutu">
+        <h3>Otomatik Sulama Sistemi</h3>
+        <p>Zaman ayarlı profesyonel sulama tesisatı kurulumu.</p>
     </div>
 
-    <div class="card box fade-in">
-      <div class="section-title"><h2>Çalışma Adımları</h2></div>
-      <ol style="color:var(--muted);padding-left:18px">
-        <li>Keşif & teklif</li>
-        <li>Planlama & malzeme</li>
-        <li>Uygulama & kontrol</li>
-        <li>Teslim & bakım</li>
-      </ol>
-    </div>
+</section>
 
-  </aside>
+<section class="orta-gorsel">
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="">
+</section>
 
-</div> <!-- grid -->
+<section id="iletisim" class="iletisim">
+    <h2>İletişim</h2>
+    <p><strong>Telefon:</strong> 0552 215 30 36</p>
+    <p><strong>Hizmet Bölgesi:</strong> İstanbul</p>
+    <a class="btn" href="https://wa.me/905522153036">WhatsApp'tan Yaz</a>
+</section>
 
-<!-- footer -->
-<div class="footer fade-in">
-  © 2025 Doğan Peyzaj — İstanbul · Tüm Hakları Saklıdır · <a href="https://wa.me/905522153036" style="color:var(--accent);text-decoration:none">WhatsApp</a>
-</div>
-
-<!-- lightbox -->
-<div id="lightbox" class="lightbox" onclick="hideLightbox()">
-  <img id="lightboxImg" src="" alt=""/>
-</div>
-
-<!-- WhatsApp floating button (big) -->
-<a class="whatsapp-float" href="https://wa.me/905522153036" target="_blank" aria-label="WhatsApp">
-  💬
-</a>
-
-<script>
-/* Theme toggle */
-const body = document.body;
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon');
-function setTheme(isLight){
-  if(isLight){
-    body.classList.add('light');
-    themeIcon.textContent = '☀️';
-    localStorage.setItem('dp_theme','light');
-  } else {
-    body.classList.remove('light');
-    themeIcon.textContent = '🌙';
-    localStorage.setItem('dp_theme','dark');
-  }
-}
-themeToggle.addEventListener('click',()=>{
-  setTheme(!body.classList.contains('light'));
-});
-/* init theme from storage */
-if(localStorage.getItem('dp_theme') === 'light'){ setTheme(true) } else { setTheme(false) }
-
-/* small fade-in animations on load */
-document.querySelectorAll('.fade-in').forEach((el,i)=>{ el.style.animationDelay = (i*80)+'ms'; });
-
-/* gallery lightbox */
-const lb = document.getElementById('lightbox');
-const lbImg = document.getElementById('lightboxImg');
-document.querySelectorAll('#galleryGrid img').forEach(img=>{
-  img.style.cursor='zoom-in';
-  img.addEventListener('click',(e)=>{
-    lbImg.src = e.currentTarget.src;
-    lb.classList.add('show');
-    document.body.style.overflow='hidden';
-  });
-});
-function hideLightbox(){
-  lb.classList.remove('show');
-  document.body.style.overflow='';
-}
-
-/* accessibility: close with esc */
-document.addEventListener('keydown', (e)=>{
-  if(e.key === 'Escape') hideLightbox();
-});
-
-/* simple image load error fallback */
-document.querySelectorAll('img').forEach(img=>{
-  img.addEventListener('error', ()=>{ img.style.opacity = '0.6'; img.style.filter='grayscale(40%)'; });
-});
-</script>
-
-</body>
-</html>
+<a href="https://wa.me/905
