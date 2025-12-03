@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğan Peyzaj - Bahçe & Rulo Çim</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+    <h1>Doğan Peyzaj</h1>
+    <p>Rulo Çim – Bahçe Düzenleme – Sulama Sistemi</p>
+    <a href="tel:05522153036" class="btn">Hemen Ara</a>
+</header>
+
+<section class="gallery">
+    <img src="assets/img/1.jpg">
+    <img src="assets/img/2.jpg">
+    <img src="assets/img/3.jpg">
+</section>
+
+</body>
+</html>
