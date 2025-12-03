@@ -94,3 +94,13 @@ footer {
   border-radius: 10px;
   object-fit: cover;
 }
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background: url('assets/bg.jpg') center/cover no-repeat;
+    color: #00ff7f;
+    text-align: left;
+}
