@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri - Doğan Peyzaj</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Galeri - Doğan Peyzaj</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Doğan Peyzaj Galeri</h1>
-    <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="iletisim.html">İletişim</a>
-    </nav>
-</header>
+<div class="gallery-page">
+  <h1>Doğan Peyzaj - Galeri</h1>
 
-<section class="gallery">
-    <h2>Yaptığımız İşlerden Örnekler</h2>
+  <div class="section-title">Villa & Bahçe Örnekleri</div>
+  <div class="gallery-grid">
+    <img data-src="galeri/villa1.jpg" src="galeri/villa1.jpg" alt="villa1">
+    <img data-src="galeri/villa2.jpg" src="galeri/villa2.jpg" alt="villa2">
+    <img data-src="galeri/villa3.jpg" src="galeri/villa3.jpg" alt="villa3">
+    <img data-src="galeri/bahce1.jpg" src="galeri/bahce1.jpg" alt="bahce1">
+    <img data-src="galeri/bahce2.jpg" src="galeri/bahce2.jpg" alt="bahce2">
+    <img data-src="galeri/bahce3.jpg" src="galeri/bahce3.jpg" alt="bahce3">
+    <img data-src="galeri/agac1.jpg" src="galeri/agac1.jpg" alt="agac1">
+    <img data-src="galeri/agac2.jpg" src="galeri/agac2.jpg" alt="agac2">
+    <img data-src="galeri/cicek1.jpg" src="galeri/cicek1.jpg" alt="cicek1">
+    <img data-src="galeri/palmiyem1.jpg" src="galeri/palmiyem1.jpg" alt="palmiyem1">
+  </div>
+</div>
 
-    <div class="gallery-container">
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+  <button class="close" id="lbClose">✕</button>
+  <img id="lbImage" src="" alt="Büyütülmüş fotoğraf">
+</div>
 
-        <img src="galeri/1.jpg" alt="Peyzaj çalışması 1">
-        <img src="galeri/2.jpg" alt="Peyzaj çalışması 2">
-        <img src="galeri/3.jpg" alt="Peyzaj çalışması 3">
-        <img src="galeri/4.jpg" alt="Peyzaj çalışması 4">
-        <img src="galeri/5.jpg" alt="Peyzaj çalışması 5">
-        <img src="galeri/6.jpg" alt="Bahçe düzenleme 1">
-        <img src="galeri/7.jpg" alt="Bahçe düzenleme 2">
-        <img src="galeri/8.jpg" alt="Bahçe düzenleme 3">
-        <img src="galeri/9.jpg" alt="Villalar için peyzaj 1">
-        <img src="galeri/10.jpg" alt="Villalar için peyzaj 2">
-        <img src="galeri/11.jpg" alt="Rulo çim serimi 1">
-        <img src="galeri/12.jpg" alt="Rulo çim serimi 2">
-        <img src="galeri/13.jpg" alt="Rulo çim uygulaması">
-        <img src="galeri/14.jpg" alt="Sert zemin tasarımı">
-        <img src="galeri/15.jpg" alt="Bahçe yapımı">
-        <img src="galeri/16.jpg" alt="Peyzaj uygulaması">
-        <img src="galeri/17.jpg" alt="Bahçe çimlendirme">
-        <img src="galeri/18.jpg" alt="Profesyonel peyzaj hizmeti">
-        <img src="galeri/19.jpg" alt="Villalar için özel peyzaj">
-        <img src="galeri/20.jpg" alt="Bahçe düzenleme örnek">
-        
-    </div>
-</section>
+<script>
+const lightbox = document.getElementById('lightbox');
+const lbImage = document.getElementById('lbImage');
+const lbClose = document.getElementById('lbClose');
 
-<footer>
-    <p>© 2025 Doğan Peyzaj – Tüm Hakları Saklıdır.</p>
-</footer>
+document.querySelectorAll('.gallery-grid img').forEach(img=>{
+  img.addEventListener('click', () => {
+    lbImage.src = img.getAttribute('data-src') || img.src;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+  });
+});
+
+lbClose.addEventListener('click', () => {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden','true');
+  lbImage.src = '';
+});
+
+lightbox.addEventListener('click', (e)=>{
+  if(e.target === lightbox) {
+    lightbox.classList.remove('open');
+    lbImage.src = '';
+  }
+});
+</script>
 
 </body>
 </html>
