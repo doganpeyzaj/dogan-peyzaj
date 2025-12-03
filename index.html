@@ -1,104 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Doğan Peyzaj</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Doğan Peyzaj — Rulo çim, bahçe düzenleme, otomatik sulama" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doğan Peyzaj - Bahçe Bakım</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.55),
+                rgba(0, 0, 0, 0.55)
+            ),
+            url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(0, 0, 0, 0.35);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 28px;
+            border-left: 4px solid #57cc57;
+            padding-left: 10px;
+        }
+
+        ul {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .iletisim {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.45);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
 
-  <nav class="nav">
-    <div class="wrap nav-inner">
-      <div class="brand">Doğan Peyzaj</div>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Hizmetler</a></li>
-        <li><a href="#gallery">Galeri</a></li>
-        <li><a href="#about">Hakkımızda</a></li>
-        <li><a href="#contact">İletişim</a></li>
-      </ul>
-    </div>
-  </nav>
+    <header>
+        <h1>Doğan Peyzaj</h1>
+        <p>Profesyonel Bahçe Bakım & Peyzaj Hizmetleri</p>
+    </header>
 
-  <header class="hero">
-    <div class="wrap hero-inner">
-      <h1 class="hero-title">Profesyonel Bahçe &amp; Peyzaj Hizmetleri</h1>
-      <p class="hero-sub">Rulo çim, otomatik sulama, villa ve site peyzaj tasarımları — İstanbul.</p>
-      <div class="hero-ctas">
-        <a class="btn primary" href="#services">Hizmetleri Gör</a>
-        <a class="btn outline" href="#gallery">Galeri</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="services" class="wrap services">
-      <h2 class="section-title">Hizmetlerimiz</h2>
-      <div class="service-grid">
-        <article class="card">
-          <img src="assets/rulo.jpg" alt="Rulo çim uygulaması">
-          <h3>Rulo Çim</h3>
-          <p>Hızlı &amp; temiz rulo çim serimi, alanınıza özel çözüm ve bakım önerisi.</p>
-          <a class="small-btn" href="#">Teklif Al</a>
-        </article>
-
-        <article class="card">
-          <img src="assets/bahçe.jpg" alt="Bahçe düzenleme">
-          <h3>Peyzaj Düzenleme</h3>
-          <p>Villa, site ve bahçe projenize uygun peyzaj düzenleme çözümleri.</p>
-          <a class="small-btn" href="#">İncele</a>
-        </article>
-
-        <article class="card">
-          <img src="assets/sulama.jpg" alt="Otomatik sulama">
-          <h3>Otomatik Sulama</h3>
-          <p>Hunter/Rainbird uyumlu sistemlerle ekonomik ve verimli sulama kurulumları.</p>
-          <a class="small-btn" href="#">Bilgi</a>
-        </article>
-      </div>
+    <section>
+        <h2>Hizmetlerimiz</h2>
+        <ul>
+            <li>Bahçe bakım hizmeti</li>
+            <li>Rulo çim uygulaması</li>
+            <li>Çim biçme & havalandırma</li>
+            <li>Sulama sistemi kurulumu</li>
+            <li>Bitki dikimi & budama</li>
+            <li>Bahçe düzenleme & peyzaj tasarım</li>
+        </ul>
     </section>
 
-    <section id="gallery" class="wrap gallery">
-      <h2 class="section-title">Galeri</h2>
-      <div class="gallery-grid">
-        <figure><img src="assets/bahçe.jpg" alt="Bahçe örnek 1"></figure>
-        <figure><img src="assets/rulo.jpg" alt="Bahçe örnek 2"></figure>
-        <figure><img src="assets/sulama.jpg" alt="Bahçe örnek 3"></figure>
-        <figure><img src="assets/hero.jpg" alt="Bahçe örnek 4"></figure>
-      </div>
+    <section class="iletisim">
+        📞 Telefon: <strong>0552 215 30 36</strong><br>
+        💬 Whatsapp: <strong>0552 215 30 36</strong>
     </section>
 
-    <section id="about" class="wrap about">
-      <h2 class="section-title">Hakkımızda</h2>
-      <p>Doğan Peyzaj olarak villa ve site peyzaj projelerinde; tasarım, uygulama ve bakım hizmetleri sunuyoruz. Kaliteli malzeme, tecrübeli ekip ve garanti ile çalışıyoruz.</p>
-    </section>
-
-    <section id="contact" class="wrap contact">
-      <h2 class="section-title">İletişim</h2>
-      <p class="phone">Telefon: <a href="tel:05522153036">0552 215 30 36</a></p>
-      <p>Bize hemen ulaşın, ücretsiz keşif için randevu alabilirsiniz.</p>
-      <a class="btn primary" href="tel:05522153036">Hemen Ara: 0552 215 30 36</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>© 2025 Doğan Peyzaj — Tüm Hakları Saklıdır.</small>
-    </div>
-  </footer>
-
-  <script>
-    // küçük mobil menü
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('navLinks');
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !open);
-      nav.classList.toggle('open');
-    });
-  </script>
+    <footer>
+        © 2025 Doğan Peyzaj – Bahçe Bakım Hizmetleri
+    </footer>
 
 </body>
 </html>
