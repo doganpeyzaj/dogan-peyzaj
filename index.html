@@ -3,70 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doğan Peyzaj – Bahçe Bakım & Peyzaj Hizmetleri</title>
+    <title>Doğan Peyzaj</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background: url("https://i.ibb.co/Yh3tzwq/green-garden.jpg") no-repeat center center / cover;
             color: white;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                        url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=60');
-            background-size: cover;
-            background-position: center;
+            backdrop-filter: blur(2px);
         }
 
         header {
+            text-align: center;
             padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.5);
         }
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
         }
 
-        header p {
-            font-size: 20px;
+        p {
+            font-size: 18px;
             opacity: 0.9;
         }
 
-        section {
-            padding: 50px 20px;
+        .section-box {
+            background: rgba(0, 0, 0, 0.55);
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 10px;
+            width: 90%;
             max-width: 900px;
-            margin: auto;
         }
 
         h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 26px;
         }
 
-        .box {
-            background: rgba(0, 0, 0, 0.45);
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            font-size: 19px;
-            line-height: 1.8;
+        .service-item {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .districts {
+            column-count: 2;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         .whatsapp-btn {
-            display: inline-block;
-            padding: 14px 24px;
+            display: block;
+            width: 90%;
+            max-width: 220px;
+            margin: 20px auto 0;
+            padding: 12px;
+            text-align: center;
+            background: #25D366;
+            color: white;
             font-size: 20px;
             font-weight: bold;
-            color: white;
-            background: #25D366;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 10px;
-            margin-top: 20px;
-            transition: 0.3s;
         }
 
         .whatsapp-btn:hover {
@@ -74,85 +87,63 @@
         }
 
         footer {
-            margin-top: 40px;
+            text-align: center;
             padding: 20px;
-            font-size: 15px;
+            margin-top: 30px;
             opacity: 0.8;
+            background: rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Doğan Peyzaj</h1>
-        <p>Profesyonel Bahçe Bakım • Rulo Çim • Bitki Dikimi • Otomatik Sulama Sistemleri</p>
-    </header>
+<header>
+    <h1>Doğan Peyzaj</h1>
+    <p>Bahçe Bakımı • Rulo Çim • Sulama Sistemleri • Peyzaj Düzenleme</p>
+</header>
 
-    <section id="about">
-        <h2>Hakkımızda</h2>
-        <div class="box">
-            <p>
-                Doğan Peyzaj olarak Marmara Bölgesi genelinde villa bahçeleri, site peyzajı,
-                özel mülkler ve işletmelere profesyonel bahçe bakım hizmeti sunuyoruz.
-                Uzman ekibimizle rulo çim serimi, çim biçme, budama, bitki dikimi ve otomatik sulama
-                sistemlerinde kaliteli ve hızlı çözümler üretiyoruz.
-            </p>
-        </div>
-    </section>
+<div class="section-box">
+    <h2>Hakkımızda</h2>
+    <p>
+        Doğan Peyzaj olarak Marmara Bölgesi genelinde villa bahçeleri, siteler, işletmeler ve özel mülklere profesyonel
+        peyzaj ve bahçe bakım hizmeti sunuyoruz. Uzman ekibimizle hızlı, güvenilir ve kaliteli çözümler üretiyoruz.
+    </p>
+</div>
 
-    <section id="services">
-        <h2>Hizmetlerimiz</h2>
-        <div class="box">
-            <ul>
-                <li>✔ Rulo Çim Serimi</li>
-                <li>✔ Çim Biçme & Bahçe Bakımı</li>
-                <li>✔ Ağaç Budama</li>
-                <li>✔ Bitki Dikimi & Bitki Temini</li>
-                <li>✔ Otomatik Sulama Sistemi Kurulumu</li>
-                <li>✔ Toprak Düzeltme & Havalandırma</li>
-                <li>✔ Villa Bahçesi Düzenleme</li>
-            </ul>
-        </div>
-    </section>
+<div class="section-box">
+    <h2>Hizmetlerimiz</h2>
 
-    <section id="areas">
-        <h2>Marmara Bölgesi Hizmet Alanlarımız</h2>
-        <div class="box">
-            <p><strong>İstanbul – Tüm İlçeler:</strong></p>
-            <p>
-                Adalar, Arnavutköy, Ataşehir, Avcılar, Bağcılar, Bahçelievler, Bakırköy, Başakşehir,
-                Bayrampaşa, Beşiktaş, Beykoz, Beylikdüzü, Beyoğlu, Büyükçekmece, Çatalca, Çekmeköy,
-                Esenler, Esenyurt, Eyüpsultan, Fatih, Gaziosmanpaşa, Güngören, Kadıköy, Kağıthane,
-                Kartal, Küçükçekmece, Maltepe, Pendik, Sancaktepe, Sarıyer, Silivri, Sultanbeyli,
-                Sultangazi, Şile, Şişli, Tuzla, Ümraniye, Üsküdar, Zeytinburnu
-            </p>
+    <div class="services-grid">
+        <div class="service-item">🌿 Bahçe Bakımı</div>
+        <div class="service-item">🌱 Rulo Çim Serimi</div>
+        <div class="service-item">💧 Otomatik Sulama Sistemi</div>
+        <div class="service-item">🌳 Ağaç Budama</div>
+        <div class="service-item">✂️ Çim Biçme</div>
+        <div class="service-item">🏡 Villa Bahçesi Düzenleme</div>
+    </div>
+</div>
 
-            <p><strong>Kocaeli – Tüm İlçeler</strong></p>
-            <p><strong>Sakarya – Tüm İlçeler</strong></p>
-            <p><strong>Tekirdağ – Tüm İlçeler</strong></p>
-            <p><strong>Yalova – Tüm İlçeler</strong></p>
-            <p><strong>Edirne – Tüm İlçeler</strong></p>
-            <p><strong>Kırklareli – Tüm İlçeler</strong></p>
-            <p><strong>Bilecik – Tüm İlçeler</strong></p>
-            <p><strong>Bursa – Tüm İlçeler</strong></p>
-        </div>
-    </section>
+<div class="section-box">
+    <h2>Marmara Bölgesi Hizmet Alanlarımız</h2>
 
-    <section>
-        <h2>İletişim</h2>
-        <div class="box">
-            <p>Bahçeniz için hızlı teklif almak isterseniz hemen WhatsApp’tan yazabilirsiniz.</p>
+    <div class="districts">
+        İstanbul, Bursa, Kocaeli, Sakarya, Yalova, Tekirdağ, Edirne, Kırklareli.<br><br>
 
-            <a class="whatsapp-btn" href="https://wa.me/905522153036?text=Merhaba%20Doğan%20Peyzaj.%20Bahçem%20için%20hizmet%20almak%20istiyorum." target="_blank">
-                WhatsApp ile İletişime Geç
-            </a>
-        </div>
-    </section>
+        İstanbul İlçeleri:<br>
+        Pendik, Tuzla, Şişli, Beşiktaş, Kağıthane, Sarıyer, Bakırköy, Bahçelievler, Bağcılar,
+        Üsküdar, Ataşehir, Ümraniye, Çekmeköy, Beykoz, Sancaktepe, Maltepe, Kartal,
+        Küçükçekmece, Avcılar, Beylikdüzü, Büyükçekmece, Esenyurt, Arnavutköy,
+        Gaziosmanpaşa, Esenler, Sultanbeyli, Fatih, Beyoğlu, Başakşehir, Silivri.
+    </div>
 
-    <footer>
-        © 2025 Doğan Peyzaj – Tüm Hakları Saklıdır.
-    </footer>
+    <!-- WhatsApp yönlendirme butonu -->
+    <a class="whatsapp-btn" href="https://wa.me/905522153036" target="_blank">WhatsApp İletişim</a>
+</div>
+
+<footer>
+    © 2025 Doğan Peyzaj – Tüm Hakları Saklıdır
+</footer>
 
 </body>
 </html>
