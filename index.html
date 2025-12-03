@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Doğan Peyzaj - Bahçe Bakım & Peyzaj</title>
+
+<title>Doğan Peyzaj | Bahçe Bakım, Rulo Çim, Sulama Sistemi İstanbul</title>
+
+<meta name="description" content="Doğan Peyzaj olarak İstanbul’un tüm ilçelerine profesyonel bahçe bakım, rulo çim serimi, otomatik sulama sistemi ve peyzaj hizmeti sunuyoruz. Hemen teklif alın!">
+<meta name="keywords" content="bahçe bakım, peyzaj, rulo çim, sulama sistemi, istanbul peyzaj, çim biçme, bahçe düzenleme">
+<meta name="author" content="Doğan Peyzaj">
 
 <style>
     body {
@@ -13,11 +18,71 @@
         color: #fff;
     }
 
+    /* Üst Menü */
+    nav {
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+
+    nav .logo {
+        font-size: 26px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 18px;
+        font-size: 18px;
+    }
+
+    /* Mobil Menü */
+    .menu-icon {
+        font-size: 28px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    @media(max-width: 700px){
+        .menu {
+            display: none;
+            flex-direction: column;
+            background: rgba(0,0,0,0.9);
+            padding: 15px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .menu a {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+    }
+
     header {
+        margin-top: 75px;
         text-align: center;
         padding: 120px 20px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.45);
     }
+
     header h1 { font-size: 48px; margin-bottom: 10px; }
     header p { font-size: 22px; }
 
@@ -37,30 +102,26 @@
     }
 
     ul { list-style: none; padding: 0; }
-    ul li { margin: 10px 0; font-size: 18px; }
+    ul li { margin: 12px 0; font-size: 18px; }
 
-    /* Yorum kutuları */
+    /* Yorumlar */
     .yorum {
         background: rgba(255,255,255,0.1);
         padding: 15px;
         border-radius: 10px;
         margin: 10px 0;
-        font-size: 18px;
     }
 
     /* SSS */
     details {
-        margin: 10px 0;
         background: rgba(255,255,255,0.1);
-        padding: 10px 15px;
-        border-radius: 8px;
-    }
-    details summary {
-        cursor: pointer;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 10px;
         font-size: 18px;
     }
 
-    /* WhatsApp Floating Button */
+    /* WhatsApp Sabit */
     .whatsapp-btn {
         position: fixed;
         bottom: 40px;
@@ -68,14 +129,25 @@
         background: #25D366;
         color: white;
         font-size: 22px;
-        padding: 15px 22px;
+        padding: 17px 23px;
         border-radius: 50px;
         text-decoration: none;
         font-weight: bold;
-        box-shadow: 0 0 10px black;
+        box-shadow: 0 0 12px black;
     }
 
-    /* Form */
+    /* Ara butonu */
+    .call-btn {
+        background: #ff9800;
+        padding: 12px 20px;
+        border-radius: 8px;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
     .form-input {
         width: 100%;
         padding: 12px;
@@ -104,80 +176,93 @@
         overflow:hidden;
     }
 </style>
+
 </head>
 <body>
 
+<!-- ÜST NAVBAR -->
+<nav>
+    <div class="logo">Doğan Peyzaj</div>
+
+    <div class="menu" id="menu">
+        <a href="#about">Hakkımızda</a>
+        <a href="#services">Hizmetler</a>
+        <a href="#areas">İlçeler</a>
+        <a href="#sss">SSS</a>
+    </div>
+
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+
+    <a href="tel:05522153036" class="call-btn">📞 Hemen Ara</a>
+</nav>
+
+<script>
+function toggleMenu(){
+    var m = document.getElementById("menu");
+    if(m.style.display === "flex") m.style.display = "none";
+    else m.style.display = "flex";
+}
+</script>
+
 <header>
-    <h1>Doğan Peyzaj</h1>
-    <p>Profesyonel Bahçe Bakım • Rulo Çim • Sulama Sistemi • Peyzaj</p>
+    <h1>Profesyonel Bahçe Bakım & Peyzaj</h1>
+    <p>İstanbul'un tüm ilçelerine hızlı ve garantili hizmet</p>
 </header>
 
-<section>
+<section id="about">
     <h2>Hakkımızda</h2>
-    <p style="font-size:18px; line-height:1.7;">
-        Doğan Peyzaj olarak İstanbul’un tüm ilçelerinde profesyonel bahçe bakım, peyzaj düzenleme,
+    <p style="font-size:18px;">
+        Doğan Peyzaj olarak İstanbul genelinde profesyonel bahçe bakım, peyzaj düzenleme,
         rulo çim serimi ve otomatik sulama sistemi kurulum hizmetleri sunuyoruz.
-        Uzman ekibimizle kaliteli, hızlı ve garantili çözümler üretmek için çalışıyoruz.
+        10 yıllık tecrübemizle kaliteli ve garantili hizmet veriyoruz.
     </p>
 </section>
 
-<section>
+<section id="services">
     <h2>Hizmetlerimiz</h2>
     <ul>
         <li>🌿 Düzenli Bahçe Bakımı</li>
-        <li>🌱 Rulo Çim Serimi ve Toprak Hazırlığı</li>
-        <li>💧 Otomatik Sulama Sistemi Kurulumu</li>
-        <li>🌳 Ağaç Budama ve Bahçe Temizliği</li>
-        <li>🍃 Çim Biçme, Havalandırma ve Gübreleme</li>
-        <li>🏡 Villa, Site ve İş Yeri Peyzaj Hizmeti</li>
-        <li>🛠 Peyzaj Yenileme ve Modern Bahçe Tasarımı</li>
+        <li>🌱 Rulo Çim Serimi</li>
+        <li>💧 Otomatik Sulama Sistemi</li>
+        <li>🌳 Ağaç Budama</li>
+        <li>🍃 Çim Biçme & Gübreleme</li>
+        <li>🏡 Peyzaj Tasarım</li>
     </ul>
 </section>
 
-<section>
+<section id="areas">
     <h2>Hizmet Verdiğimiz İlçeler</h2>
-    <p style="font-size:18px; line-height:1.7;">
-        Kadıköy, Üsküdar, Ataşehir, Beykoz, Çekmeköy, Ümraniye, Beşiktaş, Şişli, Kağıthane, Sarıyer,
-        Bakırköy, Bahçelievler, Bağcılar, Küçükçekmece, Başakşehir, Avcılar, Esenyurt, Beylikdüzü ve
-        İstanbul’un tüm ilçelerine hizmet vermekteyiz.
+    <p style="font-size:18px;">
+        Anadolu ve Avrupa Yakası'nın tamamına hizmet veriyoruz.
+        Kadıköy, Üsküdar, Ataşehir, Beykoz, Ümraniye, Beşiktaş, Sarıyer, Şişli,
+        Kağıthane, Başakşehir, Bakırköy, Bahçelievler, Bağcılar, Küçükçekmece,
+        Avcılar, Esenyurt, Beylikdüzü ve Tüm İstanbul.
     </p>
-</section>
-
-<section>
-    <h2>Neden Bizi Seçmelisiniz?</h2>
-    <ul>
-        <li>✔ 10+ yıllık profesyonel tecrübe</li>
-        <li>✔ İstanbul’un tüm ilçelerine hızlı hizmet</li>
-        <li>✔ Garantili ve kaliteli işçilik</li>
-        <li>✔ Ücretsiz keşif ve danışmanlık</li>
-        <li>✔ Uzman ekip & modern ekipman</li>
-    </ul>
 </section>
 
 <section>
     <h2>Müşteri Yorumları</h2>
-
-    <div class="yorum">⭐ ⭐ ⭐ ⭐ ⭐ – "Rulo çim serimi mükemmel oldu. Çok hızlı ve temiz işçilik."</div>
-    <div class="yorum">⭐ ⭐ ⭐ ⭐ ⭐ – "Sulama sistemi harika çalışıyor, teşekkürler."</div>
-    <div class="yorum">⭐ ⭐ ⭐ ⭐ ⭐ – "Bahçem tamamen yenilendi, tam istediğim gibi oldu."</div>
+    <div class="yorum">⭐ ⭐ ⭐ ⭐ ⭐ – "Rulo çim serimi mükemmel oldu!"</div>
+    <div class="yorum">⭐ ⭐ ⭐ ⭐ ⭐ – "Sulama sistemi harika çalışıyor."</div>
+    <div class="yorum">⭐ ⭐ ⭐ ⭐ ⭐ – "Bahçem tamamen yenilendi."</div>
 </section>
 
-<section>
-    <h2>Sıkça Sorulan Sorular</h2>
+<section id="sss">
+    <h2>Sık Sorulan Sorular</h2>
 
     <details>
-        <summary>Rulo çim kaç günde kök tutar?</summary>
-        <p>Genellikle 7–10 gün içinde kök tutar.</p>
+        <summary>Rulo çim ne kadar sürede kök tutar?</summary>
+        7–10 gün içinde kök tutar.
     </details>
 
     <details>
-        <summary>Otomatik sulama sistemi kaç saatte kurulur?</summary>
-        <p>Ortalama 3–5 saat içinde kurulum yapılır.</p>
+        <summary>Sulama sistemi kurulumu kaç saat sürer?</summary>
+        Ortalama 3–5 saatte tamamlanır.
     </details>
 
     <details>
         <summary>Bahçe bakımı ne sıklıkla yapılmalı?</summary>
-        <p>Ortalama 2 haftada bir bahçe bakımı önerilir.</p>
+        2 haftada bir önerilir.
     </details>
 </section>
 
@@ -200,12 +285,12 @@
 
     <script>
         function sendWA() {
-            let ad = document.getElementById("ad").value;
-            let ilce = document.getElementById("ilce").value;
-            let m2 = document.getElementById("metrekare").value;
-            let hizmet = document.getElementById("hizmet").value;
+            let ad = ad.value;
+            let ilce = ilce.value;
+            let m2 = metrekare.value;
+            let hizmet = hizmet.value;
 
-            let mesaj =
+            let mesaj = 
 `Merhaba, fiyat teklifi almak istiyorum.
 Ad: ${ad}
 İlçe: ${ilce}
@@ -220,8 +305,7 @@ Hizmet: ${hizmet}`;
 <section>
     <h2>Konumumuz</h2>
     <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12044.492!2d28.97953!3d41.00824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9c53d8e8abf%3A0x8d7c94b2c4e46b57!2sİstanbul!5e0!3m2!1str!2str!4v0000000000"
-        width="100%" height="350" style="border:0;" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="350" style="border:0;" loading="lazy"></iframe>
     </div>
 </section>
 
