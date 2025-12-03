@@ -4,104 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doğan Peyzaj</title>
-
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
         }
 
         header {
-            width: 100%;
-            height: 450px;
-            background: url("asset/hero.jpg") center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        header h1 {
-            background: rgba(0,0,0,0.5);
+            background: #2e7d32;
             color: #fff;
-            padding: 20px 40px;
-            font-size: 40px;
-            border-radius: 8px;
-        }
-
-        .section {
-            width: 1200px;
-            max-width: 95%;
-            margin: 40px auto;
-            background: #fff;
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #aaa;
-        }
-
-        .section img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-
-        .contact {
-            font-size: 24px;
-            margin-top: 20px;
+            padding: 20px;
             text-align: center;
+            font-size: 26px;
+            font-weight: bold;
         }
 
-        .contact a {
-            font-size: 26px;
-            color: #0d7e00;
-            font-weight: bold;
-            text-decoration: none;
+        .hero {
+            width: 100%;
+            height: 350px;
+            background-image: url("assets/hero.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #2e7d32;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px;
+            color: #333;
+        }
+
+        .card p {
+            margin: 10px;
+            color: #666;
         }
 
         footer {
+            background: #2e7d32;
+            color: white;
             text-align: center;
-            padding: 30px;
-            color: #555;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Doğan Peyzaj</h1>
-    </header>
+<header>
+    Doğan Peyzaj & Bahçe Düzenleme
+</header>
 
-    <div class="section">
-        <h2>Bahçe Düzenleme</h2>
-        <p>Profesyonel bahçe tasarım ve peyzaj uygulamaları.</p>
-        <img src="asset/bahçe.jpg" alt="Bahçe Düzenleme">
+<div class="hero"></div>
+
+<div class="container">
+    <h2>Hizmetlerimiz</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <img src="assets/cim.jpg" alt="Rulo Çim">
+            <h3>Rulo Çim</h3>
+            <p>Profesyonel rulo çim serimi.</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/peyzaj.jpg" alt="Peyzaj Tasarım">
+            <h3>Peyzaj Tasarım</h3>
+            <p>Bahçe düzenleme ve uygulama.</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/sulama.jpg" alt="Otomatik Sulama">
+            <h3>Otomatik Sulama</h3>
+            <p>Profesyonel sulama sistemi kurulumu.</p>
+        </div>
+
     </div>
+</div>
 
-    <div class="section">
-        <h2>Rulo Çim Uygulama</h2>
-        <p>Hızlı ve estetik rulo çim serim hizmeti.</p>
-        <img src="asset/rulo.jpg" alt="Rulo Çim">
-    </div>
-
-    <div class="section">
-        <h2>Otomatik Sulama Sistemi</h2>
-        <p>Bahçenize profesyonel otomatik sulama kurulumu.</p>
-        <img src="asset/sulama.jpg" alt="Sulama Sistemi">
-    </div>
-
-    <div class="section contact">
-        <p><b>Bize Ulaşın</b></p>
-        <p>
-            📞 <a href="tel:05522153036">0552 215 30 36</a><br>
-            Doğan Peyzaj
-        </p>
-    </div>
-
-    <footer>
-        © 2025 Doğan Peyzaj – Tüm Hakları Saklıdır.
-    </footer>
+<footer>
+    İletişim: 0552 215 30 36 - Doğan Peyzaj
+</footer>
 
 </body>
 </html>
