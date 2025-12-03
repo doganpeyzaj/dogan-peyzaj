@@ -3,54 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doğan Peyzaj</title>
+    <title>Doğan Peyzaj – Profesyonel Bahçe Hizmetleri</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             color: white;
-            background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1500&q=80')
+            background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80')
             no-repeat center center fixed;
             background-size: cover;
         }
 
         header {
-            background: rgba(0, 0, 0, 0.55);
-            padding: 25px;
+            background: rgba(0,0,0,0.55);
+            padding: 30px;
             text-align: center;
-            font-size: 32px;
+            font-size: 35px;
             font-weight: bold;
         }
 
         .section {
-            padding: 50px 20px;
-            background: rgba(0, 0, 0, 0.45);
+            padding: 45px 20px;
+            background: rgba(0,0,0,0.45);
             margin: 25px auto;
             width: 90%;
-            max-width: 900px;
+            max-width: 950px;
             border-radius: 15px;
         }
 
         h2 {
             text-align: center;
-            font-size: 28px;
-            margin-bottom: 20px;
             color: #00ff9d;
+            font-size: 30px;
+            margin-bottom: 25px;
         }
 
-        p {
+        p, li {
             font-size: 18px;
-            line-height: 1.6;
-            text-align: center;
+            line-height: 1.7;
         }
 
         ul {
-            font-size: 19px;
-            line-height: 1.9;
             list-style: none;
             padding-left: 0;
-            text-align: center;
         }
 
         ul li::before {
@@ -58,14 +54,29 @@
             color: #00ff9d;
         }
 
-        /* WhatsApp sabit buton */
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-size: 17px;
+        }
+
+        /* WhatsApp sabit */
         .whatsapp-btn {
             position: fixed;
             bottom: 25px;
             right: 25px;
             background-color: #25D366;
             color: white;
-            padding: 16px 25px;
+            padding: 18px 26px;
             font-size: 22px;
             border-radius: 50px;
             font-weight: bold;
@@ -77,7 +88,6 @@
         .whatsapp-btn:hover {
             background-color: #1ebe5a;
         }
-
     </style>
 </head>
 
@@ -87,33 +97,98 @@
     Doğan Peyzaj – Profesyonel Bahçe Hizmetleri
 </header>
 
+<!-- Hakkımızda -->
 <section class="section">
     <h2>Hakkımızda</h2>
     <p>
-        Doğan Peyzaj olarak İstanbul genelinde profesyonel bahçe bakım, rulo çim serme,
-        otomatik sulama sistemi kurulumları ve peyzaj düzenleme hizmetleri sunuyoruz.  
-        10 yılı aşkın tecrübemizle tüm İstanbul ilçelerine güvenilir ve kaliteli hizmet veriyoruz.
+        Doğan Peyzaj olarak yıllardır İstanbul genelinde profesyonel peyzaj ve bahçe bakım hizmetleri sunuyoruz.
+        Uzman ekibimizle rulo çim, sulama sistemleri, budama, çim biçme ve bahçe düzenleme alanlarında garantili hizmet veriyoruz.
+        Tüm İstanbul ilçelerine hızlı ve kaliteli hizmet sağlıyoruz.
     </p>
 </section>
 
-<section class="section" id="services">
+<!-- Hizmetler -->
+<section class="section">
     <h2>Hizmetlerimiz</h2>
     <ul>
         <li>Rulo Çim Serme</li>
-        <li>Bahçe Bakım</li>
-        <li>Budama – Çim Biçme</li>
+        <li>Bahçe Bakımı</li>
+        <li>Budama & Çim Biçme</li>
         <li>Otomatik Sulama Sistemi Kurulumu</li>
-        <li>Toprak Yenileme – Havalandırma</li>
+        <li>Toprak Havalandırma & Yenileme</li>
         <li>Peyzaj Tasarım ve Düzenleme</li>
     </ul>
 </section>
 
+<!-- İlçeler -->
 <section class="section">
-    <h2>Konum & Hizmet Alanı</h2>
+    <h2>Hizmet Verdiğimiz İstanbul İlçeleri</h2>
+
+    <div class="columns">
+        <div class="card">Kadıköy</div>
+        <div class="card">Ataşehir</div>
+        <div class="card">Üsküdar</div>
+        <div class="card">Beşiktaş</div>
+        <div class="card">Şişli</div>
+        <div class="card">Sarıyer</div>
+        <div class="card">Kağıthane</div>
+        <div class="card">Bakırköy</div>
+        <div class="card">Bahçelievler</div>
+        <div class="card">Avcılar</div>
+        <div class="card">Beylikdüzü</div>
+        <div class="card">Küçükçekmece</div>
+        <div class="card">Esenyurt</div>
+        <div class="card">Bayrampaşa</div>
+        <div class="card">Gaziosmanpaşa</div>
+        <div class="card">Eyüpsultan</div>
+        <div class="card">Beyoğlu</div>
+        <div class="card">Zeytinburnu</div>
+        <div class="card">Maltepe</div>
+        <div class="card">Tuzla</div>
+        <div class="card">Pendik</div>
+        <div class="card">Kartal</div>
+        <div class="card">Sancaktepe</div>
+        <div class="card">Sultanbeyli</div>
+    </div>
+</section>
+
+<!-- Neden Biz -->
+<section class="section">
+    <h2>Neden Bizi Tercih Etmelisiniz?</h2>
+    <ul>
+        <li>Profesyonel ve tecrübeli ekip</li>
+        <li>Uygun fiyat garantisi</li>
+        <li>Hızlı hizmet & aynı gün dönüş</li>
+        <li>Kaliteli malzeme kullanımı</li>
+        <li>Tüm İstanbul’a hizmet</li>
+    </ul>
+</section>
+
+<!-- Fiyatlar -->
+<section class="section">
+    <h2>Fiyat Bilgisi</h2>
     <p>
-        Merkezimiz İstanbul’dadır.  
-        Tüm **İstanbul ilçelerine** profesyonel ekip ile hizmet veriyoruz.
+        Fiyatlar bahçenin metrekare ve durumuna göre değişmektedir.  
+        Teklif almak için WhatsApp üzerinden hemen bize ulaşabilirsiniz.
     </p>
+</section>
+
+<!-- Çalışma Süreci -->
+<section class="section">
+    <h2>Nasıl Çalışıyoruz?</h2>
+    <ol>
+        <li>WhatsApp üzerinden ücretsiz keşif</li>
+        <li>Fiyatlandırma ve proje hazırlığı</li>
+        <li>Uygulama ve teslim</li>
+    </ol>
+</section>
+
+<!-- SSS -->
+<section class="section">
+    <h2>Sık Sorulan Sorular</h2>
+    <p><b>• Aynı gün hizmet veriyor musunuz?</b><br>Evet, çoğu ilçeye aynı gün gelebiliyoruz.</p>
+    <p><b>• Rulo çim ne kadar sürede serilir?</b><br>Bahçenin büyüklüğüne göre 1–3 saat içinde teslim ederiz.</p>
+    <p><b>• Sulama sistemi kurulumu kaç saat sürer?</b><br>Genelde aynı gün tamamlanır.</p>
 </section>
 
 <!-- WhatsApp Sabit Buton -->
