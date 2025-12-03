@@ -1,193 +1,141 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doğan Peyzaj</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doğan Peyzaj</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+        background: #0f1f24;
+        color: white;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url("https://i.ibb.co/gDk1w9d/garden-villa-green.jpg") no-repeat center center / cover;
-            color: white;
-            backdrop-filter: blur(2px);
-        }
+    header {
+        background: #0b3b48;
+        padding: 25px 10px;
+        text-align: center;
+    }
 
-        /* Arka plan koyuluk */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.55);
-            z-index: -1;
-        }
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+    }
 
-        /* Animasyon */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.2s forwards;
-        }
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
+    section {
+        margin: 20px;
+        padding: 20px;
+        background: #10282f;
+        border-radius: 8px;
+    }
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-        }
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        font-size: 22px;
+        color: #58d68d;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 40px;
-            font-weight: bold;
-        }
+    .services, .areas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
 
-        .section-box {
-            background: rgba(0, 0, 0, 0.55);
-            margin: 20px auto;
-            padding: 25px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 900px;
-            animation: fadeIn 1.2s forwards;
-        }
+    .box {
+        background: #0c2026;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #145a66;
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 15px;
-            font-size: 26px;
-        }
+    /* Butonlar */
+    .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        padding: 12px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+    }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
+    .btn-blue { background: #007bff; }
+    .btn-yellow { background: #f1a301; }
 
-        .service-item {
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.12);
-            border-radius: 8px;
-            text-align: center;
-            font-size: 18px;
-        }
+    /* WhatsApp sabit buton */
+    .whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25d366;
+        color: white;
+        padding: 14px 18px;
+        border-radius: 50px;
+        font-size: 18px;
+        text-decoration: none;
+        box-shadow: 0 0 10px black;
+        font-weight: bold;
+    }
 
-        .districts {
-            column-count: 2;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* WhatsApp sabit buton */
-        .whatsapp-fixed {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            background: #25D366;
-            padding: 15px 20px;
-            border-radius: 50px;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 0 15px rgba(0,0,0,0.4);
-            z-index: 999;
-        }
-
-        /* Telefon arama butonu */
-        .call-btn {
-            display: block;
-            width: 90%;
-            max-width: 220px;
-            margin: 10px auto 0;
-            padding: 12px;
-            text-align: center;
-            background: #ffb800;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-        }
-
-        /* Teklif butonu */
-        .offer-btn {
-            display: block;
-            width: 90%;
-            max-width: 220px;
-            margin: 15px auto;
-            padding: 12px;
-            background: #007bff;
-            text-align: center;
-            color: white;
-            font-size: 20px;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            opacity: 0.8;
-        }
-    </style>
+    footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        background: #0b3b48;
+        color: white;
+    }
+</style>
 </head>
-
 <body>
 
-<header class="fade-in">
+<header>
     <h1>🌿 Doğan Peyzaj</h1>
     <p>Profesyonel Bahçe Düzenleme – Rulo Çim – Otomatik Sulama Sistemleri</p>
 </header>
 
-<div class="section-box fade-in">
+<section>
     <h2>Hakkımızda</h2>
-    <p>
-        Doğan Peyzaj olarak Marmara Bölgesi genelinde villa bahçeleri, siteler, işletmeler ve özel mülklere profesyonel
-        peyzaj ve bahçe bakım hizmeti sunuyoruz. Uzman ekibimizle hızlı, güvenilir ve kaliteli çözümler üretiyoruz.
-    </p>
-</div>
+    <p>Doğan Peyzaj olarak Marmara Bölgesi genelinde villa bahçeleri, siteler, işletmeler ve özel mülklere profesyonel peyzaj ve bahçe bakım hizmeti sunuyoruz. Uzman ekibimizle hızlı, güvenilir ve kaliteli çözümler üretiyoruz.</p>
+</section>
 
-<div class="section-box fade-in">
+<section>
     <h2>Hizmetlerimiz</h2>
-
-    <div class="services-grid">
-        <div class="service-item">🌿 Bahçe Bakımı</div>
-        <div class="service-item">🌱 Rulo Çim Serimi</div>
-        <div class="service-item">💧 Otomatik Sulama Sistemi</div>
-        <div class="service-item">🌳 Ağaç Budama</div>
-        <div class="service-item">✂️ Çim Biçme</div>
-        <div class="service-item">🏡 Villa Bahçesi Düzenleme</div>
+    <div class="services">
+        <div class="box">🌱 Bahçe Bakımı</div>
+        <div class="box">🌿 Rulo Çim Serimi</div>
+        <div class="box">💧 Otomatik Sulama Sistemi</div>
+        <div class="box">🌳 Ağaç Budama</div>
+        <div class="box">✂ Çim Biçme</div>
+        <div class="box">🏡 Villa Bahçesi Düzenleme</div>
     </div>
-</div>
+</section>
 
-<div class="section-box fade-in">
+<section>
     <h2>Marmara Bölgesi Hizmet Alanlarımız</h2>
 
-    <div class="districts">
-        İstanbul, Bursa, Kocaeli, Sakarya, Yalova, Tekirdağ, Edirne, Kırklareli.<br><br>
+    <p><b>İller:</b> İstanbul, Bursa, Kocaeli, Sakarya, Yalova, Tekirdağ, Edirne, Kırklareli.</p>
 
-        <b>İstanbul İlçeleri:</b><br>
-        Pendik, Tuzla, Şişli, Beşiktaş, Kağıthane, Sarıyer, Bakırköy, Bahçelievler, Bağcılar,
-        Üsküdar, Ataşehir, Ümraniye, Çekmeköy, Beykoz, Sancaktepe, Maltepe, Kartal,
-        Küçükçekmece, Avcılar, Beylikdüzü, Büyükçekmece, Esenyurt, Arnavutköy,
-        Gaziosmanpaşa, Esenler, Sultanbeyli, Fatih, Beyoğlu, Başakşehir, Silivri.
-    </div>
+    <p><b>İstanbul İlçeleri:</b><br>
+    Pendik, Tuzla, Şişli, Beşiktaş, Kağıthane, Sarıyer, Bakırköy, Bahçelievler, Bağcılar, Üsküdar, Ataşehir, Ümraniye, Çekmeköy, Beykoz, Sancaktepe, Maltepe, Kartal, Küçükçekmece, Avcılar, Beylikdüzü, Büyükçekmece, Esenyurt, Arnavutköy, Gaziosmanpaşa, Esenler, Sultanbeyli, Fatih, Beyoğlu, Başakşehir, <b>Silivri</b>.
+    </p>
 
-    <a class="offer-btn" href="https://wa.me/905522153036?text=Merhaba%2C+Teklif+Almak+İstiyorum">📩 Teklif Al</a>
-    <a class="call-btn" href="tel:05522153036">📞 Telefonla Ara</a>
-</div>
-
-<!-- Sabit WhatsApp Butonu -->
-<a class="whatsapp-fixed" href="https://wa.me/905522153036" target="_blank">WhatsApp</a>
+    <a class="btn btn-blue" href="https://wa.me/905522153036?text=Merhaba%2C%20peyzaj%20hizmeti%20i%C3%A7in%20teklif%20almak%20istiyorum.">📩 Teklif Al</a>
+    <a class="btn btn-yellow" href="tel:05522153036">📞 Telefonla Ara</a>
+</section>
 
 <footer>
-    © 2025 Doğan Peyzaj – Tüm Hakları Saklıdır
+    © 2025 Doğan Peyzaj — Tüm Hakları Saklıdır
 </footer>
+
+<!-- WhatsApp Sabit Buton -->
+<a class="whatsapp-btn" href="https://wa.me/905522153036?text=Merhaba%2C%20bah%C3%A7e%20hizmeti%20i%C3%A7in%20ileti%C5%9Fime%20ge%C3%A7mek%20istiyorum.">WhatsApp</a>
 
 </body>
 </html>
