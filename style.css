@@ -1,81 +1,12 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Menü */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #2b5c2b;
-    padding: 15px 20px;
-    color: white;
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-/* Hero */
-.hero {
-    background: url('https://images.unsplash.com/photo-1598965402082-8b7f1c2afe7e') center/cover;
-    color: white;
-    padding: 120px 20px;
-    text-align: center;
-}
-
-.btn {
-    background: #2b5c2b;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    border-radius: 6px;
-}
-
-/* Hizmetler */
-.hizmetler {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.hizmet-kutu {
-    background: #f3f3f3;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 500px;
-    border-radius: 8px;
-}
-
-/* Orta Görsel */
-.orta-gorsel img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    margin-top: 30px;
-}
-
-/* İletişim */
-.iletisim {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* WhatsApp Sabit Buton */
-.whatsapp-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: #25d366;
-    color: white;
-    padding: 14px 18px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
+/* --- Galeri stilleri (gallery.html için) --- */
+.gallery-page { padding: 30px; max-width:1200px; margin:0 auto; }
+.gallery-page h1 { text-align:center; margin-bottom:10px; color:#233; }
+.section-title { margin:30px 0 10px; font-size:20px; color:#244; border-bottom:2px solid #e6e6e6; padding-bottom:8px; }
+.gallery-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap:14px; margin-top:12px; }
+.gallery-grid img { width:100%; height:160px; object-fit:cover; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.12); cursor:pointer; transition:transform .18s ease; }
+.gallery-grid img:hover { transform:translateY(-4px) scale(1.02); }
+.lightbox { position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.75); z-index:9999; }
+.lightbox.open { display:flex; }
+.lightbox img { max-width:95%; max-height:85%; border-radius:6px; box-shadow:0 8px 30px rgba(0,0,0,0.5); }
+.lightbox .close { position:absolute; top:18px; right:20px; color:white; background:rgba(0,0,0,0.35); border:0; padding:8px 12px; font-size:18px; border-radius:6px; cursor:pointer; }
+@media (max-width:600px){ .gallery-grid img { height:130px; } }
