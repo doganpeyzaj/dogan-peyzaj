@@ -1,125 +1,85 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Doğan Peyzaj — Villa & Bahçe Peyzaj</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Doğan Peyzaj — Rulo çim, otomatik sulama, villa bahçeleri, peyzaj tasarım. İstanbul hizmet bölgesi." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğan Peyzaj – Profesyonel Bahçe & Peyzaj Hizmetleri</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">Doğan Peyzaj</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-    <nav id="menu" class="menu">
-        <a href="#home">Ana Sayfa</a>
-        <a href="#services">Hizmetler</a>
-        <a href="#gallery">Galeri</a>
-        <a href="#about">Hakkımızda</a>
-        <a href="#contact">İletişim</a>
+<body>
+
+<header class="hero">
+    <div class="overlay"></div>
+    <nav class="navbar">
+        <div class="logo">Doğan Peyzaj</div>
+        <ul class="menu">
+            <li><a href="#hizmetler">Hizmetler</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
     </nav>
+
+    <div class="hero-content">
+        <h1>Profesyonel Bahçe & Peyzaj Hizmetleri</h1>
+        <p>Rulo çim, otomatik sulama, villa ve site peyzaj tasarımları — İstanbul.</p>
+
+        <div class="buttons">
+            <a href="#hizmetler" class="btn">Hizmetleri Gör</a>
+            <a href="#galeri" class="btn-outline">Galeriye Gözat</a>
+        </div>
+    </div>
 </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-inner wrap">
-      <h1>Profesyonel Bahçe & Peyzaj Hizmetleri</h1>
-      <p>Rulo çim, otomatik sulama, villa ve site peyzaj tasarımları — İstanbul.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#hizmetler">Hizmetleri Gör</a>
-        <a class="btn btn-ghost" href="galeri.html">Galeriye Gözat</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hizmetler -->
-  <section id="hizmetler" class="services wrap">
+<section id="hizmetler" class="section">
     <h2>Hizmetlerimiz</h2>
 
-    <div class="grid services-grid">
-      <article class="card">
-        <h3>Rulo Çim Döşeme</h3>
-        <p>Hızlı & temiz uygulama ile 1 günde yemyeşil çim.</p>
-        <a class="btn small" href="#iletisim">Teklif Al</a>
-      </article>
+    <div class="cards">
+        <div class="card">
+            <h3>Rulo Çim Döşeme</h3>
+            <p>1 günde yemyeşil çim.</p>
+        </div>
 
-      <article class="card">
-        <h3>Otomatik Sulama</h3>
-        <p>Akıllı programlanabilir sulama sistemleri — su tasarrufu.</p>
-        <a class="btn small" href="#iletisim">Teklif Al</a>
-      </article>
+        <div class="card">
+            <h3>Otomatik Sulama</h3>
+            <p>Tasarruflu & profesyonel sistem.</p>
+        </div>
 
-      <article class="card">
-        <h3>Peyzaj Tasarım</h3>
-        <p>Villa ve site peyzaj projeleri, bitki seçimleri ve uygulama.</p>
-        <a class="btn small" href="#iletisim">Teklif Al</a>
-      </article>
-
-      <article class="card">
-        <h3>Ağaç & Bitki Bakımı</h3>
-        <p>Ağaç budama, dikim, bakım ve toprağa uygun bitki seçimi.</p>
-        <a class="btn small" href="#iletisim">Teklif Al</a>
-      </article>
+        <div class="card">
+            <h3>Villa Bahçe Tasarımı</h3>
+            <p>Modern peyzaj uygulamaları.</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Hakkımızda -->
-  <section id="hakkimizda" class="about wrap">
+<section id="galeri" class="section gallery">
+    <h2>Galeri</h2>
+
+    <div class="gallery-grid">
+        <img src="gallery1.jpg">
+        <img src="gallery2.jpg">
+        <img src="gallery3.jpg">
+        <img src="gallery4.jpg">
+        <img src="gallery5.jpg">
+        <img src="gallery6.jpg">
+    </div>
+</section>
+
+<section id="hakkimizda" class="section">
     <h2>Hakkımızda</h2>
-    <p>Doğan Peyzaj; tasarım, uygulama ve bakım alanlarında deneyimli ekip ile İstanbul genelinde hizmet verir. Kalite, zaman ve müşteri memnuniyeti önceliğimizdir.</p>
-  </section>
+    <p>Doğan Peyzaj olarak İstanbul genelinde profesyonel bahçe ve peyzaj hizmetleri sunuyoruz.</p>
+</section>
 
-  <!-- Vitrin / Öne çıkan -->
-  <section class="vitrine wrap">
-    <div class="vitrine-grid">
-      <div class="v-card">
-        <img src="https://source.unsplash.com/800x600/?villa,garden" alt="Villa bahçesi">
-        <h3>Villa Bahçeleri</h3>
-        <p>Özel tasarım ve düzenlemeler.</p>
-      </div>
-      <div class="v-card">
-        <img src="https://source.unsplash.com/800x600/?lawn,grass" alt="Rulo çim">
-        <h3>Rulo Çim</h3>
-        <p>Hızlı uygulama, sağlam zemin.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- İletişim -->
-  <section id="iletisim" class="contact wrap">
+<section id="iletisim" class="section contact">
     <h2>İletişim</h2>
-    <p><strong>Hemen Ara:</strong> <a href="tel:+905522153036">0552 215 30 36</a></p>
-    <p><strong>Hizmet Bölgesi:</strong> İstanbul</p>
-    <p><a class="btn btn-primary" href="https://wa.me/905522153036" target="_blank" rel="noopener">WhatsApp'tan Yaz</a></p>
-  </section>
+    <p>Telefon: 0552 215 30 36</p>
+    <a href="https://wa.me/905522153036" class="whatsapp">WhatsApp İletişim</a>
+</section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <div>© <span id="year"></span> Doğan Peyzaj</div>
-      <div><a href="index.html">Ana Sayfa</a> • <a href="galeri.html">Galeri</a></div>
-    </div>
-  </footer>
+<footer>
+    © 2025 Doğan Peyzaj – Tüm Hakları Saklıdır.
+</footer>
 
-  <!-- WhatsApp Float -->
-  <a class="whatsapp-float" href="https://wa.me/905522153036" target="_blank" aria-label="WhatsApp">
-    <span>📞</span> WhatsApp
-  </a>
-
-  <script>
-    // yıl
-    document.getElementById('year').innerText = new Date().getFullYear();
-
-    // mobil menü toggle
-    (function(){
-      const btn = document.getElementById('nav-toggle');
-      const nav = document.getElementById('site-nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('open');
-      });
-    })();
-  </script>
 </body>
 </html>
