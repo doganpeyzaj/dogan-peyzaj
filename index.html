@@ -1,110 +1,76 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doğan Peyzaj</title>
-
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f3f7f3;
-    }
-
-    /* ÜST MENÜ */
-    header {
-        background: #0f7a32;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        font-size: 26px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
-
-    /* HERO BÖLÜMÜ */
-    .hero {
-        background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1920') no-repeat center/cover;
-        height: 350px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 36px;
-        font-weight: bold;
-        text-shadow: 0px 0px 10px black;
-    }
-
-    /* BÖLÜM BAŞLIK */
-    h2 {
-        text-align: center;
-        margin-top: 40px;
-        color: #0f7a32;
-        font-size: 30px;
-    }
-
-    /* HİZMET KUTULARI */
-    .services {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .box {
-        width: 280px;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        text-align: center;
-        font-size: 18px;
-    }
-
-    /* GALERİ */
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-        gap: 10px;
-        padding: 20px;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    /* FOOTER */
-    footer {
-        background: #0f7a32;
-        color: white;
-        text-align: center;
-        padding: 25px;
-        margin-top: 40px;
-        font-size: 18px;
-    }
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğan Peyzaj – Bahçe, Rulo Çim & Sulama Sistemleri</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>🌿 DOĞAN PEYZAJ</header>
+<!-- Üst Menü -->
+<header class="header">
+    <div class="logo">Doğan Peyzaj</div>
+    <nav class="nav">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+</header>
 
-<div class="hero">Profesyonel Peyzaj & Bahçe Hizmetleri</div>
+<!-- Kapak -->
+<section class="hero">
+    <h1>Profesyonel Bahçe & Peyzaj Hizmetleri</h1>
+    <p>Rulo çim, otomatik sulama, peyzaj tasarımı ve daha fazlası.</p>
+    <a href="#hizmetler" class="btn">Hizmetleri Gör</a>
+</section>
 
-<h2>Hizmetlerimiz</h2>
+<!-- Hizmetler -->
+<section id="hizmetler" class="services">
+    <h2>Hizmetlerimiz</h2>
 
-<div class="services">
-    <div class="box">Rulo Çim Uygulaması</div>
-    <div class="box">Peyzaj Düzenleme</div>
-    <div class="box">Bahçe Otomatik Sulama</div>
-    <div class="box">Ağaç – Bitki Dikimi</div>
-    <div class="box">Site – Villa Bahçe Bakımı</div>
-</div>
+    <div class="service-grid">
 
-<h
+        <div class="card">
+            <h3>Rulo Çim Döşeme</h3>
+            <p>1 günde yemyeşil bahçe.</p>
+        </div>
+
+        <div class="card">
+            <h3>Otomatik Sulama Sistemi</h3>
+            <p>Profesyonel bahçe sulama kurulumu.</p>
+        </div>
+
+        <div class="card">
+            <h3>Peyzaj Tasarımı</h3>
+            <p>Bahçe, villa ve site peyzaj projeleri.</p>
+        </div>
+
+        <div class="card">
+            <h3>Ağaç & Bitki Dikimi</h3>
+            <p>Palmiye, çam, çalı ve çiçek dikimi.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Hakkımızda -->
+<section id="hakkimizda" class="about">
+    <h2>Hakkımızda</h2>
+    <p>Doğan Peyzaj olarak 10 yıldır profesyonel bahçe hizmetleri sunuyoruz.</p>
+</section>
+
+<!-- İletişim -->
+<section id="iletisim" class="contact">
+    <h2>İletişim</h2>
+    <p>Telefon: <b>0552 215 30 36</b></p>
+</section>
+
+<!-- WhatsApp Butonu -->
+<a href="https://wa.me/905522153036" class="whatsapp-btn">📞 WhatsApp</a>
+
+</body>
+</html>
