@@ -1,62 +1,81 @@
-/* Genel */
-:root{
-  --accent:#2b5c2b;
-  --light:#f4f4f4;
-  --dark:#1e2a20;
-}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,Arial,Helvetica Neue,Helvetica,sans-serif;background:var(--light);color:#0b0b0b;line-height:1.4}
-.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
-
-/* Header */
-.site-header{background:var(--accent);color:white}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
-.brand{font-weight:700;font-size:20px}
-.main-nav a{color:white;text-decoration:none;margin-left:18px;font-weight:600}
-
-/* Hero */
-.hero{background-image:url('galeri/villa2.jpg');background-size:cover;background-position:center;color:white;padding:90px 0;text-align:center}
-.hero h1{font-size:32px;margin:0 0 8px}
-.hero p{margin:0 0 18px}
-.btn{background:var(--accent);color:white;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;margin-right:8px;display:inline-block}
-.btn.outline{background:transparent;border:2px solid rgba(255,255,255,0.25)}
-
-/* Hizmetler */
-.hizmetler{padding:40px 0}
-.hizmet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
-.hizmet-kutu{background:white;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:left}
-.hizmet-kutu h3{margin-top:0}
-
-/* Showcase */
-.showcase{padding:20px 0}
-.showcase-img{width:100%;height:420px;object-fit:cover;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.12)}
-
-/* İletişim */
-.iletisim{padding:36px 0;text-align:center}
-.site-footer{background:#0f0f0f;color:#ddd;padding:18px 0;text-align:center;margin-top:30px}
-
-/* WhatsApp Float */
-.whatsapp-float{
-  position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 6px 18px rgba(0,0,0,0.2);z-index:999;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5fff5;
+    color: #222;
 }
 
-/* --- GALERİ STİLLERİ (gallery.html için de burada) --- */
-.gallery-page{padding:30px;max-width:1200px;margin:0 auto}
-.gallery-page h1{text-align:center;margin-bottom:8px;color:var(--dark)}
-.section-title{margin:24px 0 12px;font-size:20px;color:#244;border-bottom:2px solid #e6e6e6;padding-bottom:8px}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:12px}
-.gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.12);cursor:pointer;transition:transform .18s ease}
-.gallery-grid img:hover{transform:translateY(-4px) scale(1.02)}
+header {
+    text-align: center;
+    padding: 20px;
+    background: #0c7d20;
+    color: white;
+}
 
-/* Lightbox */
-.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);z-index:9999}
-.lightbox.open{display:flex}
-.lightbox img{max-width:95%;max-height:85%;border-radius:6px;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
-.lightbox .close{position:absolute;top:18px;right:20px;color:white;background:rgba(0,0,0,0.35);border:0;padding:8px 12px;font-size:18px;border-radius:6px;cursor:pointer}
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('bg.jpg') center/cover no-repeat;
+    color: white;
+}
 
-/* Responsive */
-@media (max-width:800px){
-  .hero{padding:70px 0}
-  .hero h1{font-size:26px}
-  .showcase-img{height:260px}
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0c7d20;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hizmetler {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 150px;
+    box-shadow: 0 0 10px #ccc;
+    font-weight: bold;
+    color: #0c7d20;
+}
+
+.galeri {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+footer {
+    background: #0c7d20;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }
