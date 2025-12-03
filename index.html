@@ -1,315 +1,224 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğan Peyzaj – Bahçe Bakım & Peyzaj Hizmetleri</title>
 
-<title>Doğan Peyzaj | Bahçe Bakım, Rulo Çim, Sulama Sistemi İstanbul</title>
-
-<meta name="description" content="Doğan Peyzaj olarak İstanbul’un tüm ilçelerine profesyonel bahçe bakım, rulo çim serimi, otomatik sulama sistemi ve peyzaj hizmeti sunuyoruz. Hemen teklif alın!">
-<meta name="keywords" content="bahçe bakım, peyzaj, rulo çim, sulama sistemi, istanbul peyzaj, çim biçme, bahçe düzenleme">
-<meta name="author" content="Doğan Peyzaj">
-
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=60') no-repeat center/cover fixed;
-        color: #fff;
-    }
-
-    /* Üst Menü */
-    nav {
-        width: 100%;
-        background: rgba(0,0,0,0.7);
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        z-index: 999;
-    }
-
-    nav .logo {
-        font-size: 26px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin-left: 18px;
-        font-size: 18px;
-    }
-
-    /* Mobil Menü */
-    .menu-icon {
-        font-size: 28px;
-        cursor: pointer;
-        display: none;
-    }
-
-    .menu {
-        display: flex;
-    }
-
-    @media(max-width: 700px){
-        .menu {
-            display: none;
-            flex-direction: column;
-            background: rgba(0,0,0,0.9);
-            padding: 15px;
-            width: 100%;
-            margin-top: 10px;
-            border-radius: 10px;
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-shadow: 1px 1px 3px #000;
         }
 
-        .menu-icon {
-            display: block;
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.5);
         }
 
-        .menu a {
-            margin: 10px 0;
+        section {
+            padding: 45px 20px;
+            background: rgba(0,0,0,0.45);
+            margin: 25px auto;
+            max-width: 900px;
+            border-radius: 12px;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li::before {
+            content: "• ";
+            color: #00ff88;
+        }
+
+        /* WhatsApp Sabit Buton */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 40px;
             font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+            z-index: 9999;
         }
-    }
 
-    header {
-        margin-top: 75px;
-        text-align: center;
-        padding: 120px 20px;
-        background: rgba(0,0,0,0.45);
-    }
+        .whatsapp-float:hover {
+            background: #20bd5a;
+        }
 
-    header h1 { font-size: 48px; margin-bottom: 10px; }
-    header p { font-size: 22px; }
+        /* FORM */
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 8px;
+            font-size: 17px;
+        }
 
-    section {
-        background: rgba(0,0,0,0.45);
-        margin: 40px auto;
-        padding: 30px;
-        border-radius: 12px;
-        width: 90%;
-        max-width: 900px;
-    }
+        form button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 14px;
+            background: #25D366;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-    h2 {
-        text-align: center;
-        font-size: 30px;
-        margin-bottom: 15px;
-    }
+        form button:hover {
+            background: #1ebe5a;
+        }
 
-    ul { list-style: none; padding: 0; }
-    ul li { margin: 12px 0; font-size: 18px; }
+        /* SSS */
+        details {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
 
-    /* Yorumlar */
-    .yorum {
-        background: rgba(255,255,255,0.1);
-        padding: 15px;
-        border-radius: 10px;
-        margin: 10px 0;
-    }
-
-    /* SSS */
-    details {
-        background: rgba(255,255,255,0.1);
-        padding: 12px;
-        margin: 10px 0;
-        border-radius: 10px;
-        font-size: 18px;
-    }
-
-    /* WhatsApp Sabit */
-    .whatsapp-btn {
-        position: fixed;
-        bottom: 40px;
-        right: 25px;
-        background: #25D366;
-        color: white;
-        font-size: 22px;
-        padding: 17px 23px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: bold;
-        box-shadow: 0 0 12px black;
-    }
-
-    /* Ara butonu */
-    .call-btn {
-        background: #ff9800;
-        padding: 12px 20px;
-        border-radius: 8px;
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-        margin-left: 10px;
-    }
-
-    .form-input {
-        width: 100%;
-        padding: 12px;
-        margin: 8px 0;
-        border-radius: 6px;
-        border: none;
-        font-size: 17px;
-    }
-
-    button {
-        width: 100%;
-        padding: 14px;
-        border: none;
-        background: #25D366;
-        color: white;
-        font-size: 20px;
-        border-radius: 8px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    .map-container {
-        width:100%;
-        height:350px;
-        border-radius:12px;
-        overflow:hidden;
-    }
-</style>
-
+        summary {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- ÜST NAVBAR -->
-<nav>
-    <div class="logo">Doğan Peyzaj</div>
-
-    <div class="menu" id="menu">
-        <a href="#about">Hakkımızda</a>
-        <a href="#services">Hizmetler</a>
-        <a href="#areas">İlçeler</a>
-        <a href="#sss">SSS</a>
-    </div>
-
-    <span class="menu-icon" onclick="toggleMenu()">☰</span>
-
-    <a href="tel:05522153036" class="call-btn">📞 Hemen Ara</a>
-</nav>
-
-<script>
-function toggleMenu(){
-    var m = document.getElementById("menu");
-    if(m.style.display === "flex") m.style.display = "none";
-    else m.style.display = "flex";
-}
-</script>
-
 <header>
-    <h1>Profesyonel Bahçe Bakım & Peyzaj</h1>
-    <p>İstanbul'un tüm ilçelerine hızlı ve garantili hizmet</p>
+    <h1>Doğan Peyzaj</h1>
+    <p>Profesyonel Bahçe Bakım • Rulo Çim • Sulama Sistemi • Peyzaj Düzenleme</p>
 </header>
 
-<section id="about">
+<section>
     <h2>Hakkımızda</h2>
-    <p style="font-size:18px;">
-        Doğan Peyzaj olarak İstanbul genelinde profesyonel bahçe bakım, peyzaj düzenleme,
-        rulo çim serimi ve otomatik sulama sistemi kurulum hizmetleri sunuyoruz.
-        10 yıllık tecrübemizle kaliteli ve garantili hizmet veriyoruz.
+    <p>
+        Doğan Peyzaj olarak İstanbul genelinde profesyonel bahçe bakım, rulo çim serimi, 
+        otomatik sulama sistemi kurulumu ve peyzaj düzenleme hizmetleri sunuyoruz.
+        Tüm işler uzman ekip tarafından yapılır. 
+        İstanbul’un tüm ilçelerine hizmet veriyoruz.
     </p>
 </section>
 
 <section id="services">
     <h2>Hizmetlerimiz</h2>
-    <ul>
-        <li>🌿 Düzenli Bahçe Bakımı</li>
-        <li>🌱 Rulo Çim Serimi</li>
-        <li>💧 Otomatik Sulama Sistemi</li>
-        <li>🌳 Ağaç Budama</li>
-        <li>🍃 Çim Biçme & Gübreleme</li>
-        <li>🏡 Peyzaj Tasarım</li>
+    <ul style="font-size: 18px; line-height: 1.8;">
+        <li>Bahçe Bakımı</li>
+        <li>Rulo Çim Serimi</li>
+        <li>Otomatik Sulama Sistemi</li>
+        <li>Ağaç Budama ve Bahçe Temizliği</li>
+        <li>Peyzaj Düzenleme</li>
+        <li>Villa ve Site Bahçe Hizmetleri</li>
     </ul>
 </section>
 
-<section id="areas">
-    <h2>Hizmet Verdiğimiz İlçeler</h2>
-    <p style="font-size:18px;">
-        Anadolu ve Avrupa Yakası'nın tamamına hizmet veriyoruz.
-        Kadıköy, Üsküdar, Ataşehir, Beykoz, Ümraniye, Beşiktaş, Sarıyer, Şişli,
-        Kağıthane, Başakşehir, Bakırköy, Bahçelievler, Bağcılar, Küçükçekmece,
-        Avcılar, Esenyurt, Beylikdüzü ve Tüm İstanbul.
-    </p>
+<section>
+    <h2>Hizmet Verdiğimiz İstanbul İlçeleri</h2>
+    <p>Başakşehir, Küçükçekmece, Avcılar, Esenyurt, Arnavutköy, Bahçelievler, Bağcılar, Üsküdar, Kadıköy, Beşiktaş, Sarıyer ve Tüm İstanbul.</p>
 </section>
 
 <section>
-    <h2>Müşteri Yorumları</h2>
-    <div class="yorum">⭐ ⭐ ⭐ ⭐ ⭐ – "Rulo çim serimi mükemmel oldu!"</div>
-    <div class="yorum">⭐ ⭐ ⭐ ⭐ ⭐ – "Sulama sistemi harika çalışıyor."</div>
-    <div class="yorum">⭐ ⭐ ⭐ ⭐ ⭐ – "Bahçem tamamen yenilendi."</div>
+    <h2>Neden Bizi Seçmelisiniz?</h2>
+    <ul style="font-size:18px; line-height:1.7;">
+        <li>Uygun fiyat – kaliteli hizmet</li>
+        <li>Uzman ekip ve profesyonel ekipman</li>
+        <li>Hızlı dönüş ve zamanında teslim</li>
+        <li>10+ yıllık tecrübe</li>
+        <li>Tüm İstanbul’a hizmet</li>
+    </ul>
 </section>
 
-<section id="sss">
+<section>
     <h2>Sık Sorulan Sorular</h2>
 
     <details>
-        <summary>Rulo çim ne kadar sürede kök tutar?</summary>
-        7–10 gün içinde kök tutar.
+        <summary>Rulo çim ne kadar sürede serilir?</summary>
+        <p>Ortalama 1 gün içinde teslim edilir.</p>
     </details>
 
     <details>
-        <summary>Sulama sistemi kurulumu kaç saat sürer?</summary>
-        Ortalama 3–5 saatte tamamlanır.
+        <summary>Bahçe bakımını düzenli yapıyor musunuz?</summary>
+        <p>Evet, isteğe bağlı haftalık ve aylık bakım yapılır.</p>
     </details>
 
     <details>
-        <summary>Bahçe bakımı ne sıklıkla yapılmalı?</summary>
-        2 haftada bir önerilir.
+        <summary>Sulama sistemi kurulumu ne kadar sürer?</summary>
+        <p>Bahçe büyüklüğüne göre 3–6 saat arası tamamlanır.</p>
     </details>
 </section>
 
-<section>
-    <h2>Ücretsiz Fiyat Teklifi Formu</h2>
-
-    <form onsubmit="sendWA(); return false;">
-        <input class="form-input" id="ad" placeholder="Adınız Soyadınız" required>
-        <input class="form-input" id="ilce" placeholder="İlçe" required>
-        <input class="form-input" id="metrekare" placeholder="Bahçe m² (opsiyonel)">
-        <select class="form-input" id="hizmet">
-            <option>Bahçe Bakımı</option>
-            <option>Rulo Çim</option>
-            <option>Sulama Sistemi</option>
-            <option>Peyzaj Düzenleme</option>
+<section id="iletisim">
+    <h2>WhatsApp İletişim Formu</h2>
+    <form id="wpForm" onsubmit="sendToWhatsApp(event)">
+        <label>Hangi Hizmeti Alacaksınız?</label>
+        <select id="hizmet" required>
+            <option value="">Seçiniz</option>
+            <option value="Bahçe Bakımı">Bahçe Bakımı</option>
+            <option value="Rulo Çim Serimi">Rulo Çim Serimi</option>
+            <option value="Sulama Sistemi">Sulama Sistemi</option>
+            <option value="Ağaç Budama">Ağaç Budama</option>
+            <option value="Peyzaj Düzenleme">Peyzaj Düzenleme</option>
         </select>
 
-        <button>WhatsApp ile Gönder</button>
+        <label>İsminiz</label>
+        <input type="text" id="isim" required>
+
+        <label>İlçe</label>
+        <input type="text" id="ilce" required>
+
+        <label>Mesajınız</label>
+        <textarea id="mesaj" rows="4"></textarea>
+
+        <button type="submit">WhatsApp ile Gönder</button>
     </form>
-
-    <script>
-        function sendWA() {
-            let ad = ad.value;
-            let ilce = ilce.value;
-            let m2 = metrekare.value;
-            let hizmet = hizmet.value;
-
-            let mesaj = 
-`Merhaba, fiyat teklifi almak istiyorum.
-Ad: ${ad}
-İlçe: ${ilce}
-Bahçe m²: ${m2}
-Hizmet: ${hizmet}`;
-
-            window.location.href = "https://wa.me/905522153036?text=" + encodeURIComponent(mesaj);
-        }
-    </script>
 </section>
 
 <section>
-    <h2>Konumumuz</h2>
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="350" style="border:0;" loading="lazy"></iframe>
-    </div>
+    <h2>Konum</h2>
+    <p>İstanbul • Türkiye</p>
 </section>
 
-<a class="whatsapp-btn" href="https://wa.me/905522153036" target="_blank">WhatsApp</a>
+<!-- WHATSAPP SABİT BUTON -->
+<a class="whatsapp-float" 
+   href="https://wa.me/905522153036?text=Merhaba%20Doğan%20Peyzaj.%20Bahçe%20hizmeti%20için%20bilgi%20almak%20istiyorum." 
+   target="_blank">
+   WhatsApp
+</a>
 
-</body>
-</html>
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    let hizmet = document.getElementById("hizmet").value;
+    let isim = document.getElementById("isim").value;
+    let ilce = document.getElementById("ilce").value;
+    let mesaj = document.getElementById("mesaj").value;
+
+    let text =
+        "📌 *Yeni Hizmet Talebi*\n\n" +
+        "👤 İsim: " + isim + "\n" +
+        "📍 İlçe: " +
