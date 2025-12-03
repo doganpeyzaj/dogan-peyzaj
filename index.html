@@ -3,184 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doğan Peyzaj – Bahçe Bakım & Peyzaj</title>
+    <title>Doğan Peyzaj – Bahçe Bakım & Peyzaj Hizmetleri</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             color: white;
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                        url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1500&q=80');
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                        url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=60');
             background-size: cover;
             background-position: center;
         }
 
         header {
-            text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
         }
 
         header h1 {
-            font-size: 36px;
+            font-size: 42px;
             margin-bottom: 10px;
-            font-weight: bold;
         }
-        header p { font-size: 18px; }
 
-        .section {
+        header p {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        section {
             padding: 50px 20px;
             max-width: 900px;
             margin: auto;
-            background: rgba(0,0,0,0.55);
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            background: rgba(0, 0, 0, 0.45);
+            padding: 25px;
             border-radius: 10px;
             margin-bottom: 30px;
         }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 19px;
+            line-height: 1.8;
         }
 
-        /* Hizmet Kartları */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .service-box {
-            background: rgba(255,255,255,0.07);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        /* Marmara Bölgesi Liste */
-        .districts {
-            column-count: 3;
-            column-gap: 20px;
-            font-size: 16px;
-        }
-
-        /* Form */
-        .contact-form input,
-        .contact-form select,
-        .contact-form button {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border-radius: 8px;
-            border: none;
-            font-size: 16px;
-        }
-
-        .contact-form button {
-            background: #25D366;
-            color: white;
-            cursor: pointer;
-            font-size: 18px;
+        .whatsapp-btn {
+            display: inline-block;
+            padding: 14px 24px;
+            font-size: 20px;
             font-weight: bold;
+            color: white;
+            background: #25D366;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
         }
 
         footer {
-            text-align: center;
+            margin-top: 40px;
             padding: 20px;
-            opacity: 0.9;
+            font-size: 15px;
+            opacity: 0.8;
         }
     </style>
-
-    <script>
-        function sendWhatsApp() {
-            let name = document.getElementById("name").value;
-            let hizmet = document.getElementById("hizmet").value;
-            let ilce = document.getElementById("ilce").value;
-
-            let message =
-`Merhaba, bahçe hizmeti hakkında bilgi almak istiyorum.
-
-İsim: ${name}
-Hizmet: ${hizmet}
-Bölge: ${ilce}
-
-Lütfen bana dönüş yapar mısınız?`;
-
-            let url = "https://wa.me/905522153036?text=" + encodeURIComponent(message);
-            window.open(url, "_blank");
-        }
-    </script>
-
 </head>
+
 <body>
 
-<header>
-    <h1>Doğan Peyzaj</h1>
-    <p>Profesyonel Bahçe Bakım • Rulo Çim • Sulama Sistemleri • Peyzaj Düzenleme</p>
-</header>
+    <header>
+        <h1>Doğan Peyzaj</h1>
+        <p>Profesyonel Bahçe Bakım • Rulo Çim • Bitki Dikimi • Otomatik Sulama Sistemleri</p>
+    </header>
 
-<div class="section">
-    <h2>Hakkımızda</h2>
-    <p>
-        Doğan Peyzaj olarak Marmara Bölgesi genelinde villa bahçeleri, siteler, kafeler ve özel mülklerde
-        profesyonel peyzaj ve bahçe bakım hizmeti sunuyoruz.
-        Uzman ekibimizle hızlı, güvenilir ve kaliteli çözümler üretiyoruz.
-    </p>
-</div>
+    <section id="about">
+        <h2>Hakkımızda</h2>
+        <div class="box">
+            <p>
+                Doğan Peyzaj olarak Marmara Bölgesi genelinde villa bahçeleri, site peyzajı,
+                özel mülkler ve işletmelere profesyonel bahçe bakım hizmeti sunuyoruz.
+                Uzman ekibimizle rulo çim serimi, çim biçme, budama, bitki dikimi ve otomatik sulama
+                sistemlerinde kaliteli ve hızlı çözümler üretiyoruz.
+            </p>
+        </div>
+    </section>
 
-<div class="section">
-    <h2>Hizmetlerimiz</h2>
-    <div class="services">
-        <div class="service-box">🌿 Bahçe Bakımı</div>
-        <div class="service-box">🌱 Rulo Çim Serimi</div>
-        <div class="service-box">💧 Otomatik Sulama Sistemi</div>
-        <div class="service-box">🌳 Ağaç Budama</div>
-        <div class="service-box">🌾 Çim Biçme</div>
-        <div class="service-box">🏡 Villa Bahçesi Düzenleme</div>
-    </div>
-</div>
+    <section id="services">
+        <h2>Hizmetlerimiz</h2>
+        <div class="box">
+            <ul>
+                <li>✔ Rulo Çim Serimi</li>
+                <li>✔ Çim Biçme & Bahçe Bakımı</li>
+                <li>✔ Ağaç Budama</li>
+                <li>✔ Bitki Dikimi & Bitki Temini</li>
+                <li>✔ Otomatik Sulama Sistemi Kurulumu</li>
+                <li>✔ Toprak Düzeltme & Havalandırma</li>
+                <li>✔ Villa Bahçesi Düzenleme</li>
+            </ul>
+        </div>
+    </section>
 
-<div class="section">
-    <h2>Marmara Bölgesi Hizmet Alanlarımız</h2>
-    <div class="districts">
-        İstanbul, Bursa, Kocaeli, Sakarya, Yalova, Tekirdağ, Edirne, Kırklareli,
-        Kadıköy, Üsküdar, Ataşehir, Ümraniye, Çekmeköy, Beykoz, Sancaktepe,
-        Maltepe, Kartal, Pendik, Tuzla, Şişli, Beşiktaş, Kağıthane, Sarıyer,
-        Bakırköy, Bahçelievler, Bağcılar, Güngören, Zeytinburnu, Eyüpsultan,
-        Fatih, Beyoğlu, Başakşehir, Küçükçekmece, Avcılar, Beylikdüzü,
-        Büyükçekmece, Esenyurt, Arnavutköy, Gaziosmanpaşa, Esenler, Sultangazi.
-    </div>
-</div>
+    <section id="areas">
+        <h2>Marmara Bölgesi Hizmet Alanlarımız</h2>
+        <div class="box">
+            <p><strong>İstanbul – Tüm İlçeler:</strong></p>
+            <p>
+                Adalar, Arnavutköy, Ataşehir, Avcılar, Bağcılar, Bahçelievler, Bakırköy, Başakşehir,
+                Bayrampaşa, Beşiktaş, Beykoz, Beylikdüzü, Beyoğlu, Büyükçekmece, Çatalca, Çekmeköy,
+                Esenler, Esenyurt, Eyüpsultan, Fatih, Gaziosmanpaşa, Güngören, Kadıköy, Kağıthane,
+                Kartal, Küçükçekmece, Maltepe, Pendik, Sancaktepe, Sarıyer, Silivri, Sultanbeyli,
+                Sultangazi, Şile, Şişli, Tuzla, Ümraniye, Üsküdar, Zeytinburnu
+            </p>
 
-<div class="section">
-    <h2>WhatsApp Hızlı İletişim Formu</h2>
-    <div class="contact-form">
-        <input type="text" id="name" placeholder="Adınız" required>
+            <p><strong>Kocaeli – Tüm İlçeler</strong></p>
+            <p><strong>Sakarya – Tüm İlçeler</strong></p>
+            <p><strong>Tekirdağ – Tüm İlçeler</strong></p>
+            <p><strong>Yalova – Tüm İlçeler</strong></p>
+            <p><strong>Edirne – Tüm İlçeler</strong></p>
+            <p><strong>Kırklareli – Tüm İlçeler</strong></p>
+            <p><strong>Bilecik – Tüm İlçeler</strong></p>
+            <p><strong>Bursa – Tüm İlçeler</strong></p>
+        </div>
+    </section>
 
-        <select id="hizmet">
-            <option selected>Bahçe Bakımı</option>
-            <option>Rulo Çim Serimi</option>
-            <option>Sulama Sistemi</option>
-            <option>Ağaç Budama</option>
-            <option>Villa Bahçesi Düzenleme</option>
-        </select>
+    <section>
+        <h2>İletişim</h2>
+        <div class="box">
+            <p>Bahçeniz için hızlı teklif almak isterseniz hemen WhatsApp’tan yazabilirsiniz.</p>
 
-        <select id="ilce">
-            <option selected>İstanbul</option>
-            <option>Bursa</option>
-            <option>Kocaeli</option>
-            <option>Sakarya</option>
-            <option>Yalova</option>
-            <option>Tekirdağ</option>
-        </select>
+            <a class="whatsapp-btn" href="https://wa.me/905522153036?text=Merhaba%20Doğan%20Peyzaj.%20Bahçem%20için%20hizmet%20almak%20istiyorum." target="_blank">
+                WhatsApp ile İletişime Geç
+            </a>
+        </div>
+    </section>
 
-        <button onclick="sendWhatsApp()">📩 WhatsApp ile Gönder</button>
-    </div>
-</div>
-
-<footer>
-    © 2025 Doğan Peyzaj – Tüm Hakları Saklıdır
-</footer>
+    <footer>
+        © 2025 Doğan Peyzaj – Tüm Hakları Saklıdır.
+    </footer>
 
 </body>
 </html>
