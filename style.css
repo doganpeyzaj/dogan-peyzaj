@@ -1,81 +1,78 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5fff5;
-    color: #222;
+    font-family: Arial;
+    background: #f7fff7;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background: #0c7d20;
+/* Menü */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0d8c2f;
     color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
 }
 
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Kapak */
 .hero {
+    margin-top: 80px;
     text-align: center;
-    padding: 50px 20px;
-    background: url('bg.jpg') center/cover no-repeat;
+    padding: 80px 20px;
+    background: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e') center/cover;
     color: white;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 12px 25px;
-    background: #0c7d20;
-    color: white;
-    text-decoration: none;
+    background: white;
+    color: #0d8c2f;
+    border-radius: 8px;
     font-weight: bold;
-    border-radius: 5px;
+    text-decoration: none;
 }
 
-.hizmetler {
+/* Hizmet Kartları */
+.services {
     padding: 40px 20px;
-    text-align: center;
 }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .card {
     background: white;
     padding: 20px;
-    border-radius: 8px;
-    width: 150px;
-    box-shadow: 0 0 10px #ccc;
-    font-weight: bold;
-    color: #0c7d20;
-}
-
-.galeri {
-    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-.grid {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.grid img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-footer {
-    background: #0c7d20;
+/* WhatsApp Butonu */
+.whatsapp-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25d366;
     color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
