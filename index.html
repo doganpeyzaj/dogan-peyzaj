@@ -1,97 +1,107 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doğan Peyzaj | Rulo Çim & Bahçe Sulama</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğan Peyzaj</title>
 
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-        header {
-            background: #1b5e20;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
         }
 
-        .hero {
+        header {
             width: 100%;
-            height: 300px;
-            background: url("assets/hero.jpg") center/cover no-repeat;
+            height: 450px;
+            background: url("asset/hero.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            padding: 20px 40px;
+            font-size: 40px;
+            border-radius: 8px;
         }
 
         .section {
-            padding: 25px;
-            background: white;
-            margin: 15px;
+            width: 1200px;
+            max-width: 95%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px #aaa;
         }
 
         .section img {
             width: 100%;
             border-radius: 10px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .contact {
-            background: #1b5e20;
-            color: white;
-            text-align: center;
-            padding: 20px;
+            font-size: 24px;
             margin-top: 20px;
-            font-size: 20px;
+            text-align: center;
         }
 
         .contact a {
-            color: #fff;
+            font-size: 26px;
+            color: #0d7e00;
             font-weight: bold;
             text-decoration: none;
         }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #555;
+        }
     </style>
 </head>
+
 <body>
 
     <header>
-        Doğan Peyzaj – Rulo Çim & Bahçe Sulama
+        <h1>Doğan Peyzaj</h1>
     </header>
-
-    <div class="hero"></div>
-
-    <div class="section">
-        <h2>Rulo Çim Uygulaması</h2>
-        <p>
-            Profesyonel rulo çim uygulaması ile bahçeniz aynı gün yeşersin!
-        </p>
-        <img src="assets/rulo.jpg" alt="Rulo Çim">
-    </div>
 
     <div class="section">
         <h2>Bahçe Düzenleme</h2>
-        <p>
-            Peyzaj, çim biçme, çalı dikimi, budama ve tüm bahçe bakım hizmetleri.
-        </p>
-        <img src="assets/bahçe.jpg" alt="Bahçe Peyzaj">
+        <p>Profesyonel bahçe tasarım ve peyzaj uygulamaları.</p>
+        <img src="asset/bahçe.jpg" alt="Bahçe Düzenleme">
     </div>
 
     <div class="section">
-        <h2>Otomatik Sulama Sistemleri</h2>
-        <p>
-            Bahçenize profesyonel otomatik sulama sistemi kurulumu yapıyoruz.
-        </p>
-        <img src="assets/sulama.jpg" alt="Sulama Sistemi">
+        <h2>Rulo Çim Uygulama</h2>
+        <p>Hızlı ve estetik rulo çim serim hizmeti.</p>
+        <img src="asset/rulo.jpg" alt="Rulo Çim">
     </div>
 
-    <div class="contact">
-        Bize Ulaşın<br>
-        📞 <a href="tel:05522153036">0552 215 30 36</a><br>
-        Doğan Peyzaj
+    <div class="section">
+        <h2>Otomatik Sulama Sistemi</h2>
+        <p>Bahçenize profesyonel otomatik sulama kurulumu.</p>
+        <img src="asset/sulama.jpg" alt="Sulama Sistemi">
     </div>
+
+    <div class="section contact">
+        <p><b>Bize Ulaşın</b></p>
+        <p>
+            📞 <a href="tel:05522153036">0552 215 30 36</a><br>
+            Doğan Peyzaj
+        </p>
+    </div>
+
+    <footer>
+        © 2025 Doğan Peyzaj – Tüm Hakları Saklıdır.
+    </footer>
 
 </body>
 </html>
