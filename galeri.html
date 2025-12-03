@@ -1,63 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Galeri - Doğan Peyzaj</title>
+  <title>Galeri — Doğan Peyzaj</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Galeri spesifik */
+    .gallery-wrap{max-width:1100px;margin:30px auto;padding:0 18px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gallery-grid img{width:100%;height:200px;object-fit:cover;border-radius:8px;display:block;box-shadow:0 8px 24px rgba(0,0,0,0.12)}
+    h1{margin:18px 0}
+    @media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.gallery-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Doğan Peyzaj</a>
+      <button id="nav-toggle-2" aria-label="Menü">☰</button>
+      <nav class="site-nav" id="site-nav-2">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="gallery-page">
-  <h1>Doğan Peyzaj - Galeri</h1>
+  <main class="gallery-wrap">
+    <h1>Galeri — Villa & Bahçe Örnekleri</h1>
 
-  <div class="section-title">Villa & Bahçe Örnekleri</div>
-  <div class="gallery-grid">
-    <img data-src="galeri/villa1.jpg" src="galeri/villa1.jpg" alt="villa1">
-    <img data-src="galeri/villa2.jpg" src="galeri/villa2.jpg" alt="villa2">
-    <img data-src="galeri/villa3.jpg" src="galeri/villa3.jpg" alt="villa3">
-    <img data-src="galeri/bahce1.jpg" src="galeri/bahce1.jpg" alt="bahce1">
-    <img data-src="galeri/bahce2.jpg" src="galeri/bahce2.jpg" alt="bahce2">
-    <img data-src="galeri/bahce3.jpg" src="galeri/bahce3.jpg" alt="bahce3">
-    <img data-src="galeri/agac1.jpg" src="galeri/agac1.jpg" alt="agac1">
-    <img data-src="galeri/agac2.jpg" src="galeri/agac2.jpg" alt="agac2">
-    <img data-src="galeri/cicek1.jpg" src="galeri/cicek1.jpg" alt="cicek1">
-    <img data-src="galeri/palmiyem1.jpg" src="galeri/palmiyem1.jpg" alt="palmiyem1">
-  </div>
-</div>
+    <div class="gallery-grid">
+      <!-- 20 örnek görsel (Unsplash sorguları) -->
+      <img src="https://source.unsplash.com/800x600/?villa,garden,landscape" alt="bahçe 1">
+      <img src="https://source.unsplash.com/800x600/?garden,villa" alt="bahçe 2">
+      <img src="https://source.unsplash.com/800x600/?lawn,grass" alt="bahçe 3">
+      <img src="https://source.unsplash.com/800x600/?palms,garden" alt="bahçe 4">
+      <img src="https://source.unsplash.com/800x600/?flower,garden" alt="bahçe 5">
+      <img src="https://source.unsplash.com/800x600/?landscape,garden" alt="bahçe 6">
+      <img src="https://source.unsplash.com/800x600/?garden,pathway" alt="bahçe 7">
+      <img src="https://source.unsplash.com/800x600/?garden,trees" alt="bahçe 8">
+      <img src="https://source.unsplash.com/800x600/?lawn,maintenance" alt="bahçe 9">
+      <img src="https://source.unsplash.com/800x600/?garden,design" alt="bahçe 10">
+      <img src="https://source.unsplash.com/800x600/?garden,pond" alt="bahçe 11">
+      <img src="https://source.unsplash.com/800x600/?landscape,design" alt="bahçe 12">
+      <img src="https://source.unsplash.com/800x600/?garden,lighting" alt="bahçe 13">
+      <img src="https://source.unsplash.com/800x600/?tropical,garden" alt="bahçe 14">
+      <img src="https://source.unsplash.com/800x600/?backyard,garden" alt="bahçe 15">
+      <img src="https://source.unsplash.com/800x600/?green,landscape" alt="bahçe 16">
+      <img src="https://source.unsplash.com/800x600/?ornamental,garden" alt="bahçe 17">
+      <img src="https://source.unsplash.com/800x600/?trees,park" alt="bahçe 18">
+      <img src="https://source.unsplash.com/800x600/?flowerbed,garden" alt="bahçe 19">
+      <img src="https://source.unsplash.com/800x600/?garden,amenity" alt="bahçe 20">
+    </div>
+  </main>
 
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
-  <button class="close" id="lbClose">✕</button>
-  <img id="lbImage" src="" alt="Büyütülmüş fotoğraf">
-</div>
+  <a class="whatsapp-float" href="https://wa.me/905522153036" target="_blank" aria-label="WhatsApp">📞 WhatsApp</a>
 
-<script>
-const lightbox = document.getElementById('lightbox');
-const lbImage = document.getElementById('lbImage');
-const lbClose = document.getElementById('lbClose');
-
-document.querySelectorAll('.gallery-grid img').forEach(img=>{
-  img.addEventListener('click', () => {
-    lbImage.src = img.getAttribute('data-src') || img.src;
-    lightbox.classList.add('open');
-    lightbox.setAttribute('aria-hidden','false');
-  });
-});
-
-lbClose.addEventListener('click', () => {
-  lightbox.classList.remove('open');
-  lightbox.setAttribute('aria-hidden','true');
-  lbImage.src = '';
-});
-
-lightbox.addEventListener('click', (e)=>{
-  if(e.target === lightbox) {
-    lightbox.classList.remove('open');
-    lbImage.src = '';
-  }
-});
-</script>
-
+  <script>
+    // mobil nav toggle (galeri)
+    document.getElementById('nav-toggle-2').addEventListener('click', function(){
+      document.getElementById('site-nav-2').classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
